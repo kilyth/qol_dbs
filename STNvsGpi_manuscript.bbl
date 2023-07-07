@@ -1,0 +1,1468 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{schrag2000contributes}{article}{}
+      \name{author}{3}{}{%
+        {{hash=6d888ce77592ee36a944e2c1987ed37e}{%
+           family={Schrag},
+           familyi={S\bibinitperiod},
+           given={Anette},
+           giveni={A\bibinitperiod}}}%
+        {{hash=234a37cb5cc3ce0a0f9d7acef372ef19}{%
+           family={Jahanshahi},
+           familyi={J\bibinitperiod},
+           given={Marjan},
+           giveni={M\bibinitperiod}}}%
+        {{hash=95532268c7bde148089287ed1292afef}{%
+           family={Quinn},
+           familyi={Q\bibinitperiod},
+           given={Niall},
+           giveni={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{1460a3c384cf5d375bd151f0d217140d}
+      \strng{fullhash}{1460a3c384cf5d375bd151f0d217140d}
+      \strng{bibnamehash}{1460a3c384cf5d375bd151f0d217140d}
+      \strng{authorbibnamehash}{1460a3c384cf5d375bd151f0d217140d}
+      \strng{authornamehash}{1460a3c384cf5d375bd151f0d217140d}
+      \strng{authorfullhash}{1460a3c384cf5d375bd151f0d217140d}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Neurology, Neurosurgery \& Psychiatry}
+      \field{note}{\url{http://dx.doi.org/10.1136/jnnp.69.3.308}}
+      \field{title}{What contributes to quality of life in patients with Parkinson's disease?}
+      \field{year}{2000}
+    \endentry
+    \entry{martinez2011impact}{article}{}
+      \name{author}{5}{}{%
+        {{hash=dc3e5719703515dc07a2fba3e6a1471c}{%
+           family={Martinez-Martin},
+           familyi={M\bibinithyphendelim M\bibinitperiod},
+           given={Pablo},
+           giveni={P\bibinitperiod}}}%
+        {{hash=56827eb05a1815084d5855efeac5ff90}{%
+           family={Rodriguez-Blazquez},
+           familyi={R\bibinithyphendelim B\bibinitperiod},
+           given={Carmen},
+           giveni={C\bibinitperiod}}}%
+        {{hash=736765c0af06931842d1c8c03874cb25}{%
+           family={Kurtis},
+           familyi={K\bibinitperiod},
+           given={Monica\bibnamedelima M},
+           giveni={M\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=877d6fe7f3e130c2c6e7f9f638413a7b}{%
+           family={Chaudhuri},
+           familyi={C\bibinitperiod},
+           given={K\bibnamedelima Ray},
+           giveni={K\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=5fa79efaf5056890faca85c48de28533}{%
+           family={Group},
+           familyi={G\bibinitperiod},
+           given={NMSS\bibnamedelima Validation},
+           giveni={N\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+      }
+      \strng{namehash}{471940a2014be860609b1e554dca192a}
+      \strng{fullhash}{838f8d682815967b0ca5ad74d3b3aea2}
+      \strng{bibnamehash}{471940a2014be860609b1e554dca192a}
+      \strng{authorbibnamehash}{471940a2014be860609b1e554dca192a}
+      \strng{authornamehash}{471940a2014be860609b1e554dca192a}
+      \strng{authorfullhash}{838f8d682815967b0ca5ad74d3b3aea2}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Movement Disorders}
+      \field{note}{\url{https://doi.org/10.1002/mds.23462}}
+      \field{title}{The impact of non--motor symptoms on health--related quality of life of patients with Parkinson's disease}
+      \field{year}{2011}
+    \endentry
+    \entry{lachenmayer2021subthalamic}{article}{}
+      \name{author}{14}{}{%
+        {{hash=092e7ee4c667173673d0d7f41ea5fdd8}{%
+           family={Lachenmayer},
+           familyi={L\bibinitperiod},
+           given={M.\bibnamedelimi Lenard},
+           giveni={M\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=911063b5524294a1aa7e208f3fb713af}{%
+           family={Mürset},
+           familyi={M\bibinitperiod},
+           given={Melina},
+           giveni={M\bibinitperiod}}}%
+        {{hash=e61f3eb8eb6ad3a9c005ce2785234626}{%
+           family={Antih},
+           familyi={A\bibinitperiod},
+           given={Nicolas},
+           giveni={N\bibinitperiod}}}%
+        {{hash=4153b3aa4d5dfaba0533400e642c99b5}{%
+           family={Debove},
+           familyi={D\bibinitperiod},
+           given={Ines},
+           giveni={I\bibinitperiod}}}%
+        {{hash=ce766955cf22da51e3ee3901bf17524c}{%
+           family={Muellner},
+           familyi={M\bibinitperiod},
+           given={Julia},
+           giveni={J\bibinitperiod}}}%
+        {{hash=ea72c52415a1a6f2fe666ffb69b96f5e}{%
+           family={Bompart},
+           familyi={B\bibinitperiod},
+           given={Maëlys},
+           giveni={M\bibinitperiod}}}%
+        {{hash=e110810396cadae3b866292c1431e4dd}{%
+           family={Schlaeppi},
+           familyi={S\bibinitperiod},
+           given={Janine-Ai},
+           giveni={J\bibinithyphendelim A\bibinitperiod}}}%
+        {{hash=c82fbe8f98897577f7353c90244cf68c}{%
+           family={Nowacki},
+           familyi={N\bibinitperiod},
+           given={Andreas},
+           giveni={A\bibinitperiod}}}%
+        {{hash=8a727fe66f9e034ca1d844fcbb967e5d}{%
+           family={You},
+           familyi={Y\bibinitperiod},
+           given={Hana},
+           giveni={H\bibinitperiod}}}%
+        {{hash=5d500ddf3e98e0d76122e1f51d73cdbf}{%
+           family={Michelis},
+           familyi={M\bibinitperiod},
+           given={Joan\bibnamedelima P.},
+           giveni={J\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=17cd58bbc230aa402470c545ea498a78}{%
+           family={Dransart},
+           familyi={D\bibinitperiod},
+           given={Alain},
+           giveni={A\bibinitperiod}}}%
+        {{hash=01830df9f0c6d256d61a0761cda3b9b3}{%
+           family={Pollo},
+           familyi={P\bibinitperiod},
+           given={Claudio},
+           giveni={C\bibinitperiod}}}%
+        {{hash=58a6c7898760aa66158b507a221549e4}{%
+           family={Guenther},
+           familyi={G\bibinitperiod},
+           given={Deuschl},
+           giveni={D\bibinitperiod}}}%
+        {{hash=027be0d055e0c0382fecaf875e3e87d5}{%
+           family={Krack},
+           familyi={K\bibinitperiod},
+           given={Paul},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{4c8346cc4c8665396c8ac50aaece0eba}
+      \strng{fullhash}{c622579a7b1c3c9a546ed7a9f3999919}
+      \strng{bibnamehash}{4c8346cc4c8665396c8ac50aaece0eba}
+      \strng{authorbibnamehash}{4c8346cc4c8665396c8ac50aaece0eba}
+      \strng{authornamehash}{4c8346cc4c8665396c8ac50aaece0eba}
+      \strng{authorfullhash}{c622579a7b1c3c9a546ed7a9f3999919}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{npj Parkinson's Disease}
+      \field{note}{\url{https://doi.org/10.1038/s41531-021-00223-5}}
+      \field{title}{Subthalamic and pallidal deep brain stimulation for Parkinson's disease -- meta--analysis of outcomes}
+      \field{year}{2021}
+    \endentry
+    \entry{dafsari2020beneficial}{article}{}
+      \name{author}{17}{}{%
+        {{hash=ceaad28ae897121ab3d796d946a6c54a}{%
+           family={Dafsari},
+           familyi={D\bibinitperiod},
+           given={Haidar\bibnamedelima S.},
+           giveni={H\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=702c3f804de7c632ebb4ae79f8c1c02e}{%
+           family={{dos Santos Ghilardi}},
+           familyi={d\bibinitperiod},
+           given={Maria\bibnamedelima Gabriela},
+           giveni={M\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=9170f5c902c42d20d6682d53227f4ae6}{%
+           family={Visser-Vandewalle},
+           familyi={V\bibinithyphendelim V\bibinitperiod},
+           given={Veerle},
+           giveni={V\bibinitperiod}}}%
+        {{hash=d5b004ee5bcb003e3614cb1e04b84cac}{%
+           family={Rizos},
+           familyi={R\bibinitperiod},
+           given={Alexandra},
+           giveni={A\bibinitperiod}}}%
+        {{hash=cb549949b3e0452a428eff0e4557777d}{%
+           family={Ashkan},
+           familyi={A\bibinitperiod},
+           given={Keyoumars},
+           giveni={K\bibinitperiod}}}%
+        {{hash=d5b65808fe5c36e4647e06681c485fb4}{%
+           family={Silverdale},
+           familyi={S\bibinitperiod},
+           given={Monty},
+           giveni={M\bibinitperiod}}}%
+        {{hash=5a65c7572444b1fdcb79f014c1ae741d}{%
+           family={Evans},
+           familyi={E\bibinitperiod},
+           given={Julian},
+           giveni={J\bibinitperiod}}}%
+        {{hash=1606a0c8e95952e5efd2702888de4a58}{%
+           family={Martinez},
+           familyi={M\bibinitperiod},
+           given={Raquel\bibnamedelima C.R.},
+           giveni={R\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=40188b6c2e248c9cc92a5db0fd196d8c}{%
+           family={Cury},
+           familyi={C\bibinitperiod},
+           given={Rubens\bibnamedelima G.},
+           giveni={R\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=1a2b7925b001d69723ddef7afeb60e86}{%
+           family={Jost},
+           familyi={J\bibinitperiod},
+           given={Stefanie\bibnamedelima T.},
+           giveni={S\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+        {{hash=1d3824284727473f77e263728bc701cb}{%
+           family={Barbe},
+           familyi={B\bibinitperiod},
+           given={Michael\bibnamedelima T.},
+           giveni={M\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+        {{hash=3311b23b8875b7b10705cc7c3d58e8dc}{%
+           family={Fink},
+           familyi={F\bibinitperiod},
+           given={Gereon\bibnamedelima R.},
+           giveni={G\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=26ebdc514a33eccfdb4afbb4b5fa6a2f}{%
+           family={Antonini},
+           familyi={A\bibinitperiod},
+           given={Angelo},
+           giveni={A\bibinitperiod}}}%
+        {{hash=49761e0f3b2e979c1a72bc08030dc631}{%
+           family={Ray-Chaudhuri},
+           familyi={R\bibinithyphendelim C\bibinitperiod},
+           given={K.},
+           giveni={K\bibinitperiod}}}%
+        {{hash=dc3e5719703515dc07a2fba3e6a1471c}{%
+           family={Martinez-Martin},
+           familyi={M\bibinithyphendelim M\bibinitperiod},
+           given={Pablo},
+           giveni={P\bibinitperiod}}}%
+        {{hash=bd8c6ca3099c5a8aeec684e2ae381ddf}{%
+           family={Fonoff},
+           familyi={F\bibinitperiod},
+           given={Erich\bibnamedelima Talamoni},
+           giveni={E\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+        {{hash=42b74f02dc1d9982e77fa8a481eb03ac}{%
+           family={Timmermann},
+           familyi={T\bibinitperiod},
+           given={Lars},
+           giveni={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{5786f8bdb5ebb60177f5e44139756e0b}
+      \strng{fullhash}{155d2bab38a4a1d2e93d5fcb0b26243d}
+      \strng{bibnamehash}{5786f8bdb5ebb60177f5e44139756e0b}
+      \strng{authorbibnamehash}{5786f8bdb5ebb60177f5e44139756e0b}
+      \strng{authornamehash}{5786f8bdb5ebb60177f5e44139756e0b}
+      \strng{authorfullhash}{155d2bab38a4a1d2e93d5fcb0b26243d}
+      \field{extraname}{1}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Brain stimulation}
+      \field{note}{\url{https://doi.org/10.1016/j.brs.2020.09.019}}
+      \field{title}{Beneficial nonmotor effects of subthalamic and pallidal neurostimulation in Parkinson's disease}
+      \field{year}{2020}
+    \endentry
+    \entry{dafsari2018short}{article}{}
+      \name{author}{15}{}{%
+        {{hash=ba29b54f743f11d5de74060bde469ecd}{%
+           family={Dafsari},
+           familyi={D\bibinitperiod},
+           given={Haidar\bibnamedelima Salimi},
+           giveni={H\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=06e6781e152c6dd4110f832fa76f3394}{%
+           family={Wei{ß}},
+           familyi={W\bibinitperiod},
+           given={Luisa},
+           giveni={L\bibinitperiod}}}%
+        {{hash=d5b65808fe5c36e4647e06681c485fb4}{%
+           family={Silverdale},
+           familyi={S\bibinitperiod},
+           given={Monty},
+           giveni={M\bibinitperiod}}}%
+        {{hash=d5b004ee5bcb003e3614cb1e04b84cac}{%
+           family={Rizos},
+           familyi={R\bibinitperiod},
+           given={Alexandra},
+           giveni={A\bibinitperiod}}}%
+        {{hash=0e26f8de03c0fea12784c343fb315297}{%
+           family={Reddy},
+           familyi={R\bibinitperiod},
+           given={Prashanth},
+           giveni={P\bibinitperiod}}}%
+        {{hash=cb549949b3e0452a428eff0e4557777d}{%
+           family={Ashkan},
+           familyi={A\bibinitperiod},
+           given={Keyoumars},
+           giveni={K\bibinitperiod}}}%
+        {{hash=5a65c7572444b1fdcb79f014c1ae741d}{%
+           family={Evans},
+           familyi={E\bibinitperiod},
+           given={Julian},
+           giveni={J\bibinitperiod}}}%
+        {{hash=a8407a7f3f9e0ec69ab740a41db8e311}{%
+           family={Reker},
+           familyi={R\bibinitperiod},
+           given={Paul},
+           giveni={P\bibinitperiod}}}%
+        {{hash=d84813abf7dceb4e9a91724f2a977b1e}{%
+           family={Petry-Schmelzer},
+           familyi={P\bibinithyphendelim S\bibinitperiod},
+           given={Jan\bibnamedelima Niklas},
+           giveni={J\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+        {{hash=23e5eeb5517797df2bbc826e41a672fd}{%
+           family={Samuel},
+           familyi={S\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+        {{hash=9170f5c902c42d20d6682d53227f4ae6}{%
+           family={Visser-Vandewalle},
+           familyi={V\bibinithyphendelim V\bibinitperiod},
+           given={Veerle},
+           giveni={V\bibinitperiod}}}%
+        {{hash=26ebdc514a33eccfdb4afbb4b5fa6a2f}{%
+           family={Antonini},
+           familyi={A\bibinitperiod},
+           given={Angelo},
+           giveni={A\bibinitperiod}}}%
+        {{hash=dc3e5719703515dc07a2fba3e6a1471c}{%
+           family={Martinez-Martin},
+           familyi={M\bibinithyphendelim M\bibinitperiod},
+           given={Pablo},
+           giveni={P\bibinitperiod}}}%
+        {{hash=49761e0f3b2e979c1a72bc08030dc631}{%
+           family={Ray-Chaudhuri},
+           familyi={R\bibinithyphendelim C\bibinitperiod},
+           given={K.},
+           giveni={K\bibinitperiod}}}%
+        {{hash=42b74f02dc1d9982e77fa8a481eb03ac}{%
+           family={Timmermann},
+           familyi={T\bibinitperiod},
+           given={Lars},
+           giveni={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{1863ce3f689e7f0861993c3bbbf03172}
+      \strng{fullhash}{99a95ffa5e678414ca76fc447ccea323}
+      \strng{bibnamehash}{1863ce3f689e7f0861993c3bbbf03172}
+      \strng{authorbibnamehash}{1863ce3f689e7f0861993c3bbbf03172}
+      \strng{authornamehash}{1863ce3f689e7f0861993c3bbbf03172}
+      \strng{authorfullhash}{99a95ffa5e678414ca76fc447ccea323}
+      \field{extraname}{2}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Brain stimulation}
+      \field{note}{\url{https://doi.org/10.1016/j.brs.2018.02.015}}
+      \field{title}{Short-term quality of life after subthalamic stimulation depends on non-motor symptoms in Parkinson's disease}
+      \field{year}{2018}
+    \endentry
+    \entry{schuepbach2019quality}{article}{}
+      \name{author}{48}{}{%
+        {{hash=cd418bee70327d7946ed1dc207d20b87}{%
+           family={Sch{ü"}pbach},
+           familyi={S\bibinitperiod},
+           given={W.M.\bibnamedelimi Michael},
+           giveni={W\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=f30351315c3e4e6104783e50e4e0b0eb}{%
+           family={Tonder},
+           familyi={T\bibinitperiod},
+           given={Lisa},
+           giveni={L\bibinitperiod}}}%
+        {{hash=816a701afd3bd6fc6174b524ecef6bb4}{%
+           family={Schnitzler},
+           familyi={S\bibinitperiod},
+           given={Alfons},
+           giveni={A\bibinitperiod}}}%
+        {{hash=027be0d055e0c0382fecaf875e3e87d5}{%
+           family={Krack},
+           familyi={K\bibinitperiod},
+           given={Paul},
+           giveni={P\bibinitperiod}}}%
+        {{hash=a8b6fc68a57927f1e730de4b04c0faf0}{%
+           family={Rau},
+           familyi={R\bibinitperiod},
+           given={Joern},
+           giveni={J\bibinitperiod}}}%
+        {{hash=d54a73013ff2ee090e2a634b759cbe50}{%
+           family={Hartmann},
+           familyi={H\bibinitperiod},
+           given={Andreas},
+           giveni={A\bibinitperiod}}}%
+        {{hash=c1377e24efc4d4a12804b1380f61cc60}{%
+           family={Hälbig},
+           familyi={H\bibinitperiod},
+           given={Thomas\bibnamedelima D.},
+           giveni={T\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=42d238946a08a6baad88787b5e26a7b1}{%
+           family={Pineau},
+           familyi={P\bibinitperiod},
+           given={Fanny},
+           giveni={F\bibinitperiod}}}%
+        {{hash=79fc6ecdac306bb41797a704820bd789}{%
+           family={Falk},
+           familyi={F\bibinitperiod},
+           given={Andrea},
+           giveni={A\bibinitperiod}}}%
+        {{hash=79edf486a2edf96cecc54af0d6c83368}{%
+           family={Paschen},
+           familyi={P\bibinitperiod},
+           given={Laura},
+           giveni={L\bibinitperiod}}}%
+        {{hash=ddd13baa559c99809458a3c61c5b2d99}{%
+           family={Paschen},
+           familyi={P\bibinitperiod},
+           given={Stephen},
+           giveni={S\bibinitperiod}}}%
+        {{hash=61a9596bf8bf071a4f32761fea5385f7}{%
+           family={Volkmann},
+           familyi={V\bibinitperiod},
+           given={Jens},
+           giveni={J\bibinitperiod}}}%
+        {{hash=ceaad28ae897121ab3d796d946a6c54a}{%
+           family={Dafsari},
+           familyi={D\bibinitperiod},
+           given={Haidar\bibnamedelima S.},
+           giveni={H\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=1d3824284727473f77e263728bc701cb}{%
+           family={Barbe},
+           familyi={B\bibinitperiod},
+           given={Michael\bibnamedelima T.},
+           giveni={M\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+        {{hash=3311b23b8875b7b10705cc7c3d58e8dc}{%
+           family={Fink},
+           familyi={F\bibinitperiod},
+           given={Gereon\bibnamedelima R.},
+           giveni={G\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=96ef687a6e59dfaab63c682ab7abe686}{%
+           family={Kühn},
+           familyi={K\bibinitperiod},
+           given={Andrea},
+           giveni={A\bibinitperiod}}}%
+        {{hash=05484f5adeb3d3fa73581da279afe579}{%
+           family={Kupsch},
+           familyi={K\bibinitperiod},
+           given={Andreas},
+           giveni={A\bibinitperiod}}}%
+        {{hash=da5048fa0c8cfe4963bfea4442760286}{%
+           family={Schneider},
+           familyi={S\bibinitperiod},
+           given={Gerd-H.},
+           giveni={G\bibinithyphendelim H\bibinitperiod}}}%
+        {{hash=09e5c083ffa5862f80b8bbb79a907f36}{%
+           family={Seigneuret},
+           familyi={S\bibinitperiod},
+           given={Eric},
+           giveni={E\bibinitperiod}}}%
+        {{hash=948bd8b2a0ad61b2f2d3722a1a5b0737}{%
+           family={Fraix},
+           familyi={F\bibinitperiod},
+           given={Valerie},
+           giveni={V\bibinitperiod}}}%
+        {{hash=a16f69194fc14dccca713c6860fe692c}{%
+           family={Kistner},
+           familyi={K\bibinitperiod},
+           given={Andrea},
+           giveni={A\bibinitperiod}}}%
+        {{hash=55e188011dd209f28da3c28b2a89f4e8}{%
+           family={Chaynes},
+           familyi={C\bibinitperiod},
+           given={P.\bibnamedelimi Patrick},
+           giveni={P\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=0f2ca485ced19ceb5d0c3ff496426ce6}{%
+           family={Ory-Magne},
+           familyi={O\bibinithyphendelim M\bibinitperiod},
+           given={Fabienne},
+           giveni={F\bibinitperiod}}}%
+        {{hash=58336ef989c4967fc19c2b379f15c8ec}{%
+           family={Brefel-Courbon},
+           familyi={B\bibinithyphendelim C\bibinitperiod},
+           given={Christine},
+           giveni={C\bibinitperiod}}}%
+        {{hash=4b37fd779c205aed74a70c395db5996d}{%
+           family={Vesper},
+           familyi={V\bibinitperiod},
+           given={Jan},
+           giveni={J\bibinitperiod}}}%
+        {{hash=642ebc6b279da9483436acea42eecf34}{%
+           family={Wojtecki},
+           familyi={W\bibinitperiod},
+           given={Lars},
+           giveni={L\bibinitperiod}}}%
+        {{hash=bbd768635f5b0b450a58924473672ad5}{%
+           family={Derrey},
+           familyi={D\bibinitperiod},
+           given={Stéphane},
+           giveni={S\bibinitperiod}}}%
+        {{hash=3f01fd266c73db5281a69e26655eebaf}{%
+           family={Maltête},
+           familyi={M\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=a28247e0867ac643fe87a8aa32135013}{%
+           family={Damier},
+           familyi={D\bibinitperiod},
+           given={Philippe},
+           giveni={P\bibinitperiod}}}%
+        {{hash=deb2479a1c1c797a45fb67096dcd70f9}{%
+           family={Derkinderen},
+           familyi={D\bibinitperiod},
+           given={Pascal},
+           giveni={P\bibinitperiod}}}%
+        {{hash=1d138186d04fb1161537797f46c970fe}{%
+           family={Sixel-Döring},
+           familyi={S\bibinithyphendelim D\bibinitperiod},
+           given={Friederike},
+           giveni={F\bibinitperiod}}}%
+        {{hash=7268169aa705a3760e3c682bc17b4e03}{%
+           family={Trenkwalder},
+           familyi={T\bibinitperiod},
+           given={Claudia},
+           giveni={C\bibinitperiod}}}%
+        {{hash=073109d473f021f4158717020ff1904c}{%
+           family={Gharabaghi},
+           familyi={G\bibinitperiod},
+           given={Alireza},
+           giveni={A\bibinitperiod}}}%
+        {{hash=c1480da3a5dadc174c98a737d6964332}{%
+           family={Wächter},
+           familyi={W\bibinitperiod},
+           given={Tobias},
+           giveni={T\bibinitperiod}}}%
+        {{hash=5281ed7e3c613041894a3321ff033209}{%
+           family={Weiss},
+           familyi={W\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod}}}%
+        {{hash=560aedf0e504e2719b963450caa0b6ab}{%
+           family={Pinsker},
+           familyi={P\bibinitperiod},
+           given={Marcus\bibnamedelima O.},
+           giveni={M\bibinitperiod\bibinitdelim O\bibinitperiod}}}%
+        {{hash=30349867f24e14da416f225d1a3d3830}{%
+           family={Regis},
+           familyi={R\bibinitperiod},
+           given={Jean-Marie},
+           giveni={J\bibinithyphendelim M\bibinitperiod}}}%
+        {{hash=f4e397698b32293592e1bcba643bc916}{%
+           family={Witjas},
+           familyi={W\bibinitperiod},
+           given={Tatiana},
+           giveni={T\bibinitperiod}}}%
+        {{hash=2ebf5ec741a46aef9d40ccf77d0bde2d}{%
+           family={Thobois},
+           familyi={T\bibinitperiod},
+           given={Stephane},
+           giveni={S\bibinitperiod}}}%
+        {{hash=a74b192bdeaf65df1bd0e0ba197b9547}{%
+           family={Mertens},
+           familyi={M\bibinitperiod},
+           given={Patrick},
+           giveni={P\bibinitperiod}}}%
+        {{hash=a82c771208fbcda1f6604aebd1d62005}{%
+           family={Knudsen},
+           familyi={K\bibinitperiod},
+           given={Karina},
+           giveni={K\bibinitperiod}}}%
+        {{hash=b36cd19e06238028e5e7798f7036d997}{%
+           family={Schade-Brittinger},
+           familyi={S\bibinithyphendelim B\bibinitperiod},
+           given={Carmen},
+           giveni={C\bibinitperiod}}}%
+        {{hash=9166ebfd1bb6846c0f6a75297e85f0af}{%
+           family={Houeto},
+           familyi={H\bibinitperiod},
+           given={Jean-Luc},
+           giveni={J\bibinithyphendelim L\bibinitperiod}}}%
+        {{hash=7e13ccad60bb831bf40d4d4bdddfa493}{%
+           family={Agid},
+           familyi={A\bibinitperiod},
+           given={Yves},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=b40e1853f8e091ae6011f026a929f88b}{%
+           family={Vidailhet},
+           familyi={V\bibinitperiod},
+           given={Marie},
+           giveni={M\bibinitperiod}}}%
+        {{hash=42b74f02dc1d9982e77fa8a481eb03ac}{%
+           family={Timmermann},
+           familyi={T\bibinitperiod},
+           given={Lars},
+           giveni={L\bibinitperiod}}}%
+        {{hash=2abd9ab40b7d0c81115663e90e8624c9}{%
+           family={Deuschl},
+           familyi={D\bibinitperiod},
+           given={Günther},
+           giveni={G\bibinitperiod}}}%
+        {{hash=aec377d83ced61343042d45be6dbb6ee}{%
+           family={EARLYSTIM\bibnamedelimb study\bibnamedelima group},
+           familyi={E\bibinitperiod\bibinitdelim s\bibinitperiod\bibinitdelim g\bibinitperiod},
+           prefix={for\bibnamedelima the},
+           prefixi={f\bibinitperiod\bibinitdelim t\bibinitperiod}}}%
+      }
+      \strng{namehash}{a267d99c8677e2e25e5cd3ef3d9af8bb}
+      \strng{fullhash}{d335182c6435f87b491f6604946546eb}
+      \strng{bibnamehash}{a267d99c8677e2e25e5cd3ef3d9af8bb}
+      \strng{authorbibnamehash}{a267d99c8677e2e25e5cd3ef3d9af8bb}
+      \strng{authornamehash}{a267d99c8677e2e25e5cd3ef3d9af8bb}
+      \strng{authorfullhash}{d335182c6435f87b491f6604946546eb}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Neurology}
+      \field{note}{\url{https://doi.org/10.1212/WNL.0000000000007037}}
+      \field{title}{Quality of life predicts outcome of deep brain stimulation in early Parkinson's disease}
+      \field{year}{2019}
+    \endentry
+    \entry{deep2001deep}{article}{}
+      \name{author}{1}{}{%
+        {{hash=ba2e2966a6400fa6e30a3185824cc4e3}{%
+           family={{Deep--Brain Stimulation for Parkinson's Disease Study Group}},
+           familyi={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{ba2e2966a6400fa6e30a3185824cc4e3}
+      \strng{fullhash}{ba2e2966a6400fa6e30a3185824cc4e3}
+      \strng{bibnamehash}{ba2e2966a6400fa6e30a3185824cc4e3}
+      \strng{authorbibnamehash}{ba2e2966a6400fa6e30a3185824cc4e3}
+      \strng{authornamehash}{ba2e2966a6400fa6e30a3185824cc4e3}
+      \strng{authorfullhash}{ba2e2966a6400fa6e30a3185824cc4e3}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{New England Journal of Medicine}
+      \field{note}{\url{https://doi.org/10.1056/NEJMoa000827}}
+      \field{title}{Deep-brain stimulation of the subthalamic nucleus or the pars interna of the globus pallidus in Parkinson's disease}
+      \field{year}{2001}
+    \endentry
+    \entry{anderson2005pallidal}{article}{}
+      \name{author}{5}{}{%
+        {{hash=6c5952f1a69c09dc62582726dcb8fc32}{%
+           family={Anderson},
+           familyi={A\bibinitperiod},
+           given={Valerie\bibnamedelima C},
+           giveni={V\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=72285e33246872a3695337e37a3d7894}{%
+           family={Burchiel},
+           familyi={B\bibinitperiod},
+           given={Kim\bibnamedelima J},
+           giveni={K\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=b1f977a6d4dc70cfc15053c675ee502d}{%
+           family={Hogarth},
+           familyi={H\bibinitperiod},
+           given={Penelope},
+           giveni={P\bibinitperiod}}}%
+        {{hash=38e2bb986f7511ea051b4731acfb880f}{%
+           family={Favre},
+           familyi={F\bibinitperiod},
+           given={Jacques},
+           giveni={J\bibinitperiod}}}%
+        {{hash=55aec9ebaa55b0ad31adc2aeee0a3719}{%
+           family={Hammerstad},
+           familyi={H\bibinitperiod},
+           given={John\bibnamedelima P},
+           giveni={J\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \strng{namehash}{3bc8466b81337b136241d93ec02dfbcb}
+      \strng{fullhash}{68ab005bb172a3010b4e79e519906b34}
+      \strng{bibnamehash}{3bc8466b81337b136241d93ec02dfbcb}
+      \strng{authorbibnamehash}{3bc8466b81337b136241d93ec02dfbcb}
+      \strng{authornamehash}{3bc8466b81337b136241d93ec02dfbcb}
+      \strng{authorfullhash}{68ab005bb172a3010b4e79e519906b34}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Archives of neurology}
+      \field{note}{\url{https://doi.org/10.1001/archneur.62.4.554}}
+      \field{title}{Pallidal vs subthalamic nucleus deep brain stimulation in Parkinson's disease}
+      \field{year}{2005}
+    \endentry
+    \entry{follett2010pallidal}{article}{}
+      \name{author}{26}{}{%
+        {{hash=1f619bf9a2c0e892a1d53694e19d81f1}{%
+           family={Follett},
+           familyi={F\bibinitperiod},
+           given={Kenneth\bibnamedelima A.},
+           giveni={K\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=f2028084ce69f9924264b553ed7621b6}{%
+           family={Weaver},
+           familyi={W\bibinitperiod},
+           given={Frances\bibnamedelima M.},
+           giveni={F\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=f2838b054e15d104e21ed1dfc54417ac}{%
+           family={Stern},
+           familyi={S\bibinitperiod},
+           given={Matthew},
+           giveni={M\bibinitperiod}}}%
+        {{hash=64f13fb91862527fc19fb5ebac1ec1ae}{%
+           family={Hur},
+           familyi={H\bibinitperiod},
+           given={Kwan},
+           giveni={K\bibinitperiod}}}%
+        {{hash=4236b924f63005b8cfdf9cd2f5d64e57}{%
+           family={Harris},
+           familyi={H\bibinitperiod},
+           given={Crystal\bibnamedelima L.},
+           giveni={C\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=e85079235b2a8c88ee9360e55b37523a}{%
+           family={Luo},
+           familyi={L\bibinitperiod},
+           given={Ping},
+           giveni={P\bibinitperiod}}}%
+        {{hash=a9d4be22454eb47e4b95c5b2bd8435d1}{%
+           family={Marks},
+           familyi={M\bibinitperiod},
+           given={William\bibnamedelima J.},
+           giveni={W\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=72a6465d29080fc6aeaf625c6b235ae6}{%
+           family={Rothlind},
+           familyi={R\bibinitperiod},
+           given={Johannes},
+           giveni={J\bibinitperiod}}}%
+        {{hash=c78c7774f7e31b1c637ffa9ecdc40d77}{%
+           family={Sagher},
+           familyi={S\bibinitperiod},
+           given={Oren},
+           giveni={O\bibinitperiod}}}%
+        {{hash=0007d432613333f0ab99fd99663f1d7a}{%
+           family={Moy},
+           familyi={M\bibinitperiod},
+           given={Claudia},
+           giveni={C\bibinitperiod}}}%
+        {{hash=3c7535d4e1516111431f795df1da0c1d}{%
+           family={Pahwa},
+           familyi={P\bibinitperiod},
+           given={Rajesh},
+           giveni={R\bibinitperiod}}}%
+        {{hash=7841e88cfda398666e02570cc3dd0752}{%
+           family={Burchiel},
+           familyi={B\bibinitperiod},
+           given={Kim},
+           giveni={K\bibinitperiod}}}%
+        {{hash=b1f977a6d4dc70cfc15053c675ee502d}{%
+           family={Hogarth},
+           familyi={H\bibinitperiod},
+           given={Penelope},
+           giveni={P\bibinitperiod}}}%
+        {{hash=8443af53e4e4086a8aff4e26c34131c4}{%
+           family={Lai},
+           familyi={L\bibinitperiod},
+           given={Eugene\bibnamedelima C.},
+           giveni={E\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=eceadf6f4ead6206fa798058757b2e67}{%
+           family={Duda},
+           familyi={D\bibinitperiod},
+           given={John\bibnamedelima E.},
+           giveni={J\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=e059f664db24955336bd33f301b56a6c}{%
+           family={Holloway},
+           familyi={H\bibinitperiod},
+           given={Kathryn},
+           giveni={K\bibinitperiod}}}%
+        {{hash=825775de3cad687d41a5acaa75e73dc3}{%
+           family={Samii},
+           familyi={S\bibinitperiod},
+           given={Ali},
+           giveni={A\bibinitperiod}}}%
+        {{hash=c82a0100a2501c566c70fb44b7d57897}{%
+           family={Horn},
+           familyi={H\bibinitperiod},
+           given={Stacy},
+           giveni={S\bibinitperiod}}}%
+        {{hash=55879ef9ff79ab7d409c45d42d5791a8}{%
+           family={Bronstein},
+           familyi={B\bibinitperiod},
+           given={Jeff\bibnamedelima M.},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=0edf64a675260dba504939632556e28d}{%
+           family={Stoner},
+           familyi={S\bibinitperiod},
+           given={Gatana},
+           giveni={G\bibinitperiod}}}%
+        {{hash=4138ec9bf32798350fca002bbdec965c}{%
+           family={Starr},
+           familyi={S\bibinitperiod},
+           given={Philip\bibnamedelima A.},
+           giveni={P\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=f88c2a0b857ded77d0d0edf4f15452f9}{%
+           family={Simpson},
+           familyi={S\bibinitperiod},
+           given={Richard},
+           giveni={R\bibinitperiod}}}%
+        {{hash=47b4f63f4f7b563629dc6095657daa3e}{%
+           family={Baltuch},
+           familyi={B\bibinitperiod},
+           given={Gordon},
+           giveni={G\bibinitperiod}}}%
+        {{hash=f10eebada2812e6e32ce93a545c0e7c8}{%
+           family={De\bibnamedelima Salles},
+           familyi={D\bibinitperiod\bibinitdelim S\bibinitperiod},
+           given={Antonio},
+           giveni={A\bibinitperiod}}}%
+        {{hash=f59fda732f2db4de9348695bb611ba6b}{%
+           family={Huang},
+           familyi={H\bibinitperiod},
+           given={Grant\bibnamedelima D.},
+           giveni={G\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=80498ed21e0f037a7fba86c0f9f9bc63}{%
+           family={Reda},
+           familyi={R\bibinitperiod},
+           given={Domenic\bibnamedelima J.},
+           giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \strng{namehash}{2100d877ae2e44a602037c93f4b8e301}
+      \strng{fullhash}{12ade621c81678c9810533694d70f683}
+      \strng{bibnamehash}{2100d877ae2e44a602037c93f4b8e301}
+      \strng{authorbibnamehash}{2100d877ae2e44a602037c93f4b8e301}
+      \strng{authornamehash}{2100d877ae2e44a602037c93f4b8e301}
+      \strng{authorfullhash}{12ade621c81678c9810533694d70f683}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{New England Journal of Medicine}
+      \field{note}{\url{https://doi.org/10.1056/NEJMoa0907083}}
+      \field{title}{Pallidal versus subthalamic deep-brain stimulation for Parkinson's disease}
+      \field{year}{2010}
+    \endentry
+    \entry{weaver2012randomized}{article}{}
+      \name{author}{26}{}{%
+        {{hash=f2028084ce69f9924264b553ed7621b6}{%
+           family={Weaver},
+           familyi={W\bibinitperiod},
+           given={Frances\bibnamedelima M.},
+           giveni={F\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=1f619bf9a2c0e892a1d53694e19d81f1}{%
+           family={Follett},
+           familyi={F\bibinitperiod},
+           given={Kenneth\bibnamedelima A.},
+           giveni={K\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=f2838b054e15d104e21ed1dfc54417ac}{%
+           family={Stern},
+           familyi={S\bibinitperiod},
+           given={Matthew},
+           giveni={M\bibinitperiod}}}%
+        {{hash=e85079235b2a8c88ee9360e55b37523a}{%
+           family={Luo},
+           familyi={L\bibinitperiod},
+           given={Ping},
+           giveni={P\bibinitperiod}}}%
+        {{hash=4236b924f63005b8cfdf9cd2f5d64e57}{%
+           family={Harris},
+           familyi={H\bibinitperiod},
+           given={Crystal\bibnamedelima L.},
+           giveni={C\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=64f13fb91862527fc19fb5ebac1ec1ae}{%
+           family={Hur},
+           familyi={H\bibinitperiod},
+           given={Kwan},
+           giveni={K\bibinitperiod}}}%
+        {{hash=f9fe3ad41cdd66b0ec5dfdc4f3bea909}{%
+           family={William\bibnamedelimb J.\bibnamedelimi Marks},
+           familyi={W\bibinitperiod\bibinitdelim J\bibinitperiod\bibinitdelim M\bibinitperiod},
+           given={Jr.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=72a6465d29080fc6aeaf625c6b235ae6}{%
+           family={Rothlind},
+           familyi={R\bibinitperiod},
+           given={Johannes},
+           giveni={J\bibinitperiod}}}%
+        {{hash=c78c7774f7e31b1c637ffa9ecdc40d77}{%
+           family={Sagher},
+           familyi={S\bibinitperiod},
+           given={Oren},
+           giveni={O\bibinitperiod}}}%
+        {{hash=0007d432613333f0ab99fd99663f1d7a}{%
+           family={Moy},
+           familyi={M\bibinitperiod},
+           given={Claudia},
+           giveni={C\bibinitperiod}}}%
+        {{hash=3c7535d4e1516111431f795df1da0c1d}{%
+           family={Pahwa},
+           familyi={P\bibinitperiod},
+           given={Rajesh},
+           giveni={R\bibinitperiod}}}%
+        {{hash=7841e88cfda398666e02570cc3dd0752}{%
+           family={Burchiel},
+           familyi={B\bibinitperiod},
+           given={Kim},
+           giveni={K\bibinitperiod}}}%
+        {{hash=b1f977a6d4dc70cfc15053c675ee502d}{%
+           family={Hogarth},
+           familyi={H\bibinitperiod},
+           given={Penelope},
+           giveni={P\bibinitperiod}}}%
+        {{hash=8443af53e4e4086a8aff4e26c34131c4}{%
+           family={Lai},
+           familyi={L\bibinitperiod},
+           given={Eugene\bibnamedelima C.},
+           giveni={E\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=eceadf6f4ead6206fa798058757b2e67}{%
+           family={Duda},
+           familyi={D\bibinitperiod},
+           given={John\bibnamedelima E.},
+           giveni={J\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=e059f664db24955336bd33f301b56a6c}{%
+           family={Holloway},
+           familyi={H\bibinitperiod},
+           given={Kathryn},
+           giveni={K\bibinitperiod}}}%
+        {{hash=825775de3cad687d41a5acaa75e73dc3}{%
+           family={Samii},
+           familyi={S\bibinitperiod},
+           given={Ali},
+           giveni={A\bibinitperiod}}}%
+        {{hash=c82a0100a2501c566c70fb44b7d57897}{%
+           family={Horn},
+           familyi={H\bibinitperiod},
+           given={Stacy},
+           giveni={S\bibinitperiod}}}%
+        {{hash=55879ef9ff79ab7d409c45d42d5791a8}{%
+           family={Bronstein},
+           familyi={B\bibinitperiod},
+           given={Jeff\bibnamedelima M.},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=0edf64a675260dba504939632556e28d}{%
+           family={Stoner},
+           familyi={S\bibinitperiod},
+           given={Gatana},
+           giveni={G\bibinitperiod}}}%
+        {{hash=4138ec9bf32798350fca002bbdec965c}{%
+           family={Starr},
+           familyi={S\bibinitperiod},
+           given={Philip\bibnamedelima A.},
+           giveni={P\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=f88c2a0b857ded77d0d0edf4f15452f9}{%
+           family={Simpson},
+           familyi={S\bibinitperiod},
+           given={Richard},
+           giveni={R\bibinitperiod}}}%
+        {{hash=47b4f63f4f7b563629dc6095657daa3e}{%
+           family={Baltuch},
+           familyi={B\bibinitperiod},
+           given={Gordon},
+           giveni={G\bibinitperiod}}}%
+        {{hash=853c6f000d1d26131fefd6718675dfeb}{%
+           family={Salles},
+           familyi={S\bibinitperiod},
+           given={Antonio\bibnamedelima De},
+           giveni={A\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=f59fda732f2db4de9348695bb611ba6b}{%
+           family={Huang},
+           familyi={H\bibinitperiod},
+           given={Grant\bibnamedelima D.},
+           giveni={G\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=80498ed21e0f037a7fba86c0f9f9bc63}{%
+           family={Reda},
+           familyi={R\bibinitperiod},
+           given={Domenic\bibnamedelima J.},
+           giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \strng{namehash}{4e2c1ad653c489d1573fb246233a80f2}
+      \strng{fullhash}{48fd29a3db6bd7688d3517e40531cada}
+      \strng{bibnamehash}{4e2c1ad653c489d1573fb246233a80f2}
+      \strng{authorbibnamehash}{4e2c1ad653c489d1573fb246233a80f2}
+      \strng{authornamehash}{4e2c1ad653c489d1573fb246233a80f2}
+      \strng{authorfullhash}{48fd29a3db6bd7688d3517e40531cada}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Neurology}
+      \field{note}{\url{https://n.neurology.org/content/79/1/55}}
+      \field{title}{Randomized trial of deep brain stimulation for Parkinson disease: thirty-six-month outcomes}
+      \field{year}{2012}
+    \endentry
+    \entry{rodriguez2005bilateral}{article}{}
+      \name{author}{29}{}{%
+        {{hash=480cb4be2a31c312c8ec6c889aabc522}{%
+           family={Rodriguez-Oroz},
+           familyi={R\bibinithyphendelim O\bibinitperiod},
+           given={M.\bibnamedelimi C.},
+           giveni={M\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=1b261c7cc47775333250c5cb82d15972}{%
+           family={Obeso},
+           familyi={O\bibinitperiod},
+           given={J.\bibnamedelimi A.},
+           giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=c2f2469512027050bb91ac1bc0766975}{%
+           family={Lang},
+           familyi={L\bibinitperiod},
+           given={A.\bibnamedelimi E.},
+           giveni={A\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=8be184d675acb228f84a2499ae4b4d07}{%
+           family={Houeto},
+           familyi={H\bibinitperiod},
+           given={J.-L.},
+           giveni={J\bibinithyphendelim L\bibinitperiod}}}%
+        {{hash=ec57dcde2fc6515a988b7e21e9e2fd4f}{%
+           family={Pollak},
+           familyi={P\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod}}}%
+        {{hash=5ea9aecbab23004d89734ef2b864f777}{%
+           family={Rehncrona},
+           familyi={R\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=c630438cead0212e167197e0beb781fb}{%
+           family={Kulisevsky},
+           familyi={K\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=c19beed9bb76420ff560438870d586e9}{%
+           family={Albanese},
+           familyi={A\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=3bfacecf44324d75b8df505b0a38afe4}{%
+           family={Volkmann},
+           familyi={V\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=f53b8f490bb1dda9c32a812df4e1ebb3}{%
+           family={Hariz},
+           familyi={H\bibinitperiod},
+           given={M.\bibnamedelimi I.},
+           giveni={M\bibinitperiod\bibinitdelim I\bibinitperiod}}}%
+        {{hash=e1521a4b640a595bfe65d29cc66c3059}{%
+           family={Quinn},
+           familyi={Q\bibinitperiod},
+           given={N.\bibnamedelimi P.},
+           giveni={N\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=1b261c7cc47775333250c5cb82d15972}{%
+           family={Speelman},
+           familyi={S\bibinitperiod},
+           given={J.\bibnamedelimi D.},
+           giveni={J\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=60584a66c1f4bd953e80d62c4b137945}{%
+           family={Guridi},
+           familyi={G\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=6799a3f213be961cf98e26d41f6e0419}{%
+           family={Zamarbide},
+           familyi={Z\bibinitperiod},
+           given={I.},
+           giveni={I\bibinitperiod}}}%
+        {{hash=ff05b24f63ccab3958db7431c4eb37a2}{%
+           family={Gironell},
+           familyi={G\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=d946d5e5a7d9fdfa97c70701068334fb}{%
+           family={Molet},
+           familyi={M\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=acf1e8b7f6420dd9b517d235513b7515}{%
+           family={Pascual-Sedano},
+           familyi={P\bibinithyphendelim S\bibinitperiod},
+           given={B.},
+           giveni={B\bibinitperiod}}}%
+        {{hash=02b86ab7cd0513e380280011cd036113}{%
+           family={Pidoux},
+           familyi={P\bibinitperiod},
+           given={B.},
+           giveni={B\bibinitperiod}}}%
+        {{hash=af051dd8a6b38fa1e188d4d102a300c9}{%
+           family={Bonnet},
+           familyi={B\bibinitperiod},
+           given={A.\bibnamedelimi M.},
+           giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=9d2689cb85d542db4f82f2aeefa8265b}{%
+           family={Agid},
+           familyi={A\bibinitperiod},
+           given={Y.},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=c07ce798bf4593ee8c16430742968c61}{%
+           family={Xie},
+           familyi={X\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=bb338879cb99b18dc86b19922ea9be62}{%
+           family={Benabid},
+           familyi={B\bibinitperiod},
+           given={A.-L.},
+           giveni={A\bibinithyphendelim L\bibinitperiod}}}%
+        {{hash=b474cf2138771636e9ad9e0e2dd9de0a}{%
+           family={Lozano},
+           familyi={L\bibinitperiod},
+           given={A.\bibnamedelimi M.},
+           giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=7db3b0f4cf1f3a0bbdb1a8a99175a539}{%
+           family={Saint-Cyr},
+           familyi={S\bibinithyphendelim C\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=0fdb49e7b9d664ad5f0acdc47785d331}{%
+           family={Romito},
+           familyi={R\bibinitperiod},
+           given={L.},
+           giveni={L\bibinitperiod}}}%
+        {{hash=f45ce36f7d0fdf0463fcbd7de59ad8ae}{%
+           family={Contarino},
+           familyi={C\bibinitperiod},
+           given={M.\bibnamedelimi F.},
+           giveni={M\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+        {{hash=f5782d1040459c4ed6088009cbdbc93e}{%
+           family={Scerrati},
+           familyi={S\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=3d652ad658600d06102f3f27913f2ddd}{%
+           family={Fraix},
+           familyi={F\bibinitperiod},
+           given={V.},
+           giveni={V\bibinitperiod}}}%
+        {{hash=15c21485f98b46b2649d6d5393a30645}{%
+           family={Van\bibnamedelima Blercom},
+           familyi={V\bibinitperiod\bibinitdelim B\bibinitperiod},
+           given={N.},
+           giveni={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{69860c3d5ffde5cba1ce56f179fd8835}
+      \strng{fullhash}{938aaf4fccafc1b83e389f66752128e7}
+      \strng{bibnamehash}{69860c3d5ffde5cba1ce56f179fd8835}
+      \strng{authorbibnamehash}{69860c3d5ffde5cba1ce56f179fd8835}
+      \strng{authornamehash}{69860c3d5ffde5cba1ce56f179fd8835}
+      \strng{authorfullhash}{938aaf4fccafc1b83e389f66752128e7}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Brain}
+      \field{note}{\url{https://doi.org/10.1093/brain/awh571}}
+      \field{title}{Bilateral deep brain stimulation in Parkinson's disease: a multicentre study with 4 years follow-up}
+      \field{year}{2005}
+    \endentry
+    \entry{goetz2012calibration}{article}{}
+      \name{author}{3}{}{%
+        {{hash=5b2d318bbb741f1e8fbdba68e507b588}{%
+           family={Goetz},
+           familyi={G\bibinitperiod},
+           given={Christopher\bibnamedelima G},
+           giveni={C\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=7eaeaed3e57086f4216db51ff795aa76}{%
+           family={Stebbins},
+           familyi={S\bibinitperiod},
+           given={Glenn\bibnamedelima T},
+           giveni={G\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+        {{hash=30dfecd1e4c68f9844867bf9581962d3}{%
+           family={Tilley},
+           familyi={T\bibinitperiod},
+           given={Barbara\bibnamedelima C},
+           giveni={B\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \strng{namehash}{2f161451cddfecaa9ad3ad88aa518e1f}
+      \strng{fullhash}{2f161451cddfecaa9ad3ad88aa518e1f}
+      \strng{bibnamehash}{2f161451cddfecaa9ad3ad88aa518e1f}
+      \strng{authorbibnamehash}{2f161451cddfecaa9ad3ad88aa518e1f}
+      \strng{authornamehash}{2f161451cddfecaa9ad3ad88aa518e1f}
+      \strng{authorfullhash}{2f161451cddfecaa9ad3ad88aa518e1f}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Movement disorders}
+      \field{note}{\url{https://doi.org/10.1002/mds.25122}}
+      \field{title}{Calibration of unified Parkinson's disease rating scale scores to Movement Disorder Society-unified Parkinson's disease rating scale scores}
+      \field{year}{2012}
+    \endentry
+    \entry{tomlinson2010systematic}{article}{}
+      \name{author}{6}{}{%
+        {{hash=9c9f7bfa5fbcf0b5a4585672e711e21d}{%
+           family={Tomlinson},
+           familyi={T\bibinitperiod},
+           given={Claire\bibnamedelima L},
+           giveni={C\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=29ca383f8b87b4a83c971b48c8a04973}{%
+           family={Stowe},
+           familyi={S\bibinitperiod},
+           given={Rebecca},
+           giveni={R\bibinitperiod}}}%
+        {{hash=a9c4f151b4320fe291992630a63db954}{%
+           family={Patel},
+           familyi={P\bibinitperiod},
+           given={Smitaa},
+           giveni={S\bibinitperiod}}}%
+        {{hash=2787785f7077437799141b28bdf66c8c}{%
+           family={Rick},
+           familyi={R\bibinitperiod},
+           given={Caroline},
+           giveni={C\bibinitperiod}}}%
+        {{hash=0b518adbb5f4ace9edd7d9ee029745d8}{%
+           family={Gray},
+           familyi={G\bibinitperiod},
+           given={Richard},
+           giveni={R\bibinitperiod}}}%
+        {{hash=086940a4ec32d4260a0ed151c5ef062b}{%
+           family={Clarke},
+           familyi={C\bibinitperiod},
+           given={Carl\bibnamedelima E},
+           giveni={C\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \strng{namehash}{8e625529c962c0fcd8f95675ca5d0b3e}
+      \strng{fullhash}{98aa8d899c1b49a90f5b8b859e0bf61e}
+      \strng{bibnamehash}{8e625529c962c0fcd8f95675ca5d0b3e}
+      \strng{authorbibnamehash}{8e625529c962c0fcd8f95675ca5d0b3e}
+      \strng{authornamehash}{8e625529c962c0fcd8f95675ca5d0b3e}
+      \strng{authorfullhash}{98aa8d899c1b49a90f5b8b859e0bf61e}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Movement disorders}
+      \field{note}{\url{https://doi.org/10.1002/mds.23429}}
+      \field{title}{Systematic review of levodopa dose equivalency reporting in Parkinson's disease}
+      \field{year}{2010}
+    \endentry
+    \entry{schade2020levodopa}{article}{}
+      \name{author}{3}{}{%
+        {{hash=703ccd84c246f5fc55b51155cd56d085}{%
+           family={Schade},
+           familyi={S\bibinitperiod},
+           given={Sebastian},
+           giveni={S\bibinitperiod}}}%
+        {{hash=5c984bf5bdc8d654a871d86c949ded9b}{%
+           family={Mollenhauer},
+           familyi={M\bibinitperiod},
+           given={Brit},
+           giveni={B\bibinitperiod}}}%
+        {{hash=7268169aa705a3760e3c682bc17b4e03}{%
+           family={Trenkwalder},
+           familyi={T\bibinitperiod},
+           given={Claudia},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{ee54f74046c7463b408b2443c45b79dd}
+      \strng{fullhash}{ee54f74046c7463b408b2443c45b79dd}
+      \strng{bibnamehash}{ee54f74046c7463b408b2443c45b79dd}
+      \strng{authorbibnamehash}{ee54f74046c7463b408b2443c45b79dd}
+      \strng{authornamehash}{ee54f74046c7463b408b2443c45b79dd}
+      \strng{authorfullhash}{ee54f74046c7463b408b2443c45b79dd}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Movement disorders clinical practice}
+      \field{note}{\url{https://doi.org/10.1002/mdc3.12921}}
+      \field{title}{Levodopa equivalent dose conversion factors: an updated proposal including opicapone and safinamide}
+      \field{year}{2020}
+    \endentry
+    \entry{R}{manual}{}
+      \name{author}{1}{}{%
+        {{hash=dcdebb6b35bff7c0568bf8c50ef8626d}{%
+           family={{R Core Team}},
+           familyi={R\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Vienna, Austria}%
+      }
+      \list{organization}{1}{%
+        {R Foundation for Statistical Computing}%
+      }
+      \strng{namehash}{dcdebb6b35bff7c0568bf8c50ef8626d}
+      \strng{fullhash}{dcdebb6b35bff7c0568bf8c50ef8626d}
+      \strng{bibnamehash}{dcdebb6b35bff7c0568bf8c50ef8626d}
+      \strng{authorbibnamehash}{dcdebb6b35bff7c0568bf8c50ef8626d}
+      \strng{authornamehash}{dcdebb6b35bff7c0568bf8c50ef8626d}
+      \strng{authorfullhash}{dcdebb6b35bff7c0568bf8c50ef8626d}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{\url{https://www.R-project.org/}}
+      \field{title}{R: A Language and Environment for Statistical Computing}
+      \field{year}{2022}
+    \endentry
+    \entry{missForest}{article}{}
+      \name{author}{2}{}{%
+        {{hash=fe8c04fb43b876964c2f03b4e891b637}{%
+           family={Stekhoven},
+           familyi={S\bibinitperiod},
+           given={Daniel\bibnamedelima J.},
+           giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=73b8ae79083852e052f5bd5f82021408}{%
+           family={Bühlmann},
+           familyi={B\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{32c90ca3655f80cecc006ea5c9a1e973}
+      \strng{fullhash}{32c90ca3655f80cecc006ea5c9a1e973}
+      \strng{bibnamehash}{32c90ca3655f80cecc006ea5c9a1e973}
+      \strng{authorbibnamehash}{32c90ca3655f80cecc006ea5c9a1e973}
+      \strng{authornamehash}{32c90ca3655f80cecc006ea5c9a1e973}
+      \strng{authorfullhash}{32c90ca3655f80cecc006ea5c9a1e973}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Bioinformatics}
+      \field{note}{\url{https://doi.org/10.1093/bioinformatics/btr597}}
+      \field{title}{MissForest --- non--parametric missing value imputation for mixed-type data}
+      \field{year}{2012}
+    \endentry
+    \entry{feldman2005}{article}{}
+      \name{author}{1}{}{%
+        {{hash=34e455fccef1af516492522f2227f918}{%
+           family={Feldman},
+           familyi={F\bibinitperiod},
+           given={Barry\bibnamedelima E},
+           giveni={B\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \strng{namehash}{34e455fccef1af516492522f2227f918}
+      \strng{fullhash}{34e455fccef1af516492522f2227f918}
+      \strng{bibnamehash}{34e455fccef1af516492522f2227f918}
+      \strng{authorbibnamehash}{34e455fccef1af516492522f2227f918}
+      \strng{authornamehash}{34e455fccef1af516492522f2227f918}
+      \strng{authorfullhash}{34e455fccef1af516492522f2227f918}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{SSRN}
+      \field{note}{\url{http://dx.doi.org/10.2139/ssrn.2255827}}
+      \field{title}{Relative importance and value}
+      \field{year}{2005}
+    \endentry
+    \entry{relaimpo}{article}{}
+      \name{author}{1}{}{%
+        {{hash=fb7665cbb74f4ebc72a8c21cefe13ab1}{%
+           family={Grömping},
+           familyi={G\bibinitperiod},
+           given={Ulrike},
+           giveni={U\bibinitperiod}}}%
+      }
+      \strng{namehash}{fb7665cbb74f4ebc72a8c21cefe13ab1}
+      \strng{fullhash}{fb7665cbb74f4ebc72a8c21cefe13ab1}
+      \strng{bibnamehash}{fb7665cbb74f4ebc72a8c21cefe13ab1}
+      \strng{authorbibnamehash}{fb7665cbb74f4ebc72a8c21cefe13ab1}
+      \strng{authornamehash}{fb7665cbb74f4ebc72a8c21cefe13ab1}
+      \strng{authorfullhash}{fb7665cbb74f4ebc72a8c21cefe13ab1}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Statistical Software}
+      \field{note}{\url{https://doi.org/10.18637/jss.v017.i01}}
+      \field{title}{Relative Importance for Linear Regression in R: The Package relaimpo}
+      \field{year}{2006}
+    \endentry
+    \entry{matching}{article}{}
+      \name{author}{2}{}{%
+        {{hash=3aaf66d6eeaa9e8bb5dd6cfd585fe30f}{%
+           family={Sekhon},
+           familyi={S\bibinitperiod},
+           given={Jasjeet\bibnamedelima Singh},
+           giveni={J\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=60fa05b22b68bbb8d5a5b87b22127e0b}{%
+           family={Grieve},
+           familyi={G\bibinitperiod},
+           given={Richard\bibnamedelima D.},
+           giveni={R\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \strng{namehash}{4a96378a074a817ccd38f70bb036c1c8}
+      \strng{fullhash}{4a96378a074a817ccd38f70bb036c1c8}
+      \strng{bibnamehash}{4a96378a074a817ccd38f70bb036c1c8}
+      \strng{authorbibnamehash}{4a96378a074a817ccd38f70bb036c1c8}
+      \strng{authornamehash}{4a96378a074a817ccd38f70bb036c1c8}
+      \strng{authorfullhash}{4a96378a074a817ccd38f70bb036c1c8}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Health Economics}
+      \field{note}{\url{https://doi.org/10.1002/hec.1748}}
+      \field{title}{A Matching Method For Improving Covariate Balance in Cost-Effectiveness Analyses}
+      \field{year}{2012}
+    \endentry
+    \entry{ggplot}{book}{}
+      \name{author}{1}{}{%
+        {{hash=1d0f6977ce2d043e298a59a1cd75b7ef}{%
+           family={Wickham},
+           familyi={W\bibinitperiod},
+           given={Hadley},
+           giveni={H\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer--Verlag New York}%
+      }
+      \strng{namehash}{1d0f6977ce2d043e298a59a1cd75b7ef}
+      \strng{fullhash}{1d0f6977ce2d043e298a59a1cd75b7ef}
+      \strng{bibnamehash}{1d0f6977ce2d043e298a59a1cd75b7ef}
+      \strng{authorbibnamehash}{1d0f6977ce2d043e298a59a1cd75b7ef}
+      \strng{authornamehash}{1d0f6977ce2d043e298a59a1cd75b7ef}
+      \strng{authorfullhash}{1d0f6977ce2d043e298a59a1cd75b7ef}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{\url{https://ggplot2.tidyverse.org}}
+      \field{title}{ggplot2: Elegant Graphics for Data Analysis}
+      \field{year}{2016}
+    \endentry
+    \entry{folstein1975mini}{article}{}
+      \name{author}{3}{}{%
+        {{hash=44e541ba7710e4864a4e104f52cb8b1a}{%
+           family={Folstein},
+           familyi={F\bibinitperiod},
+           given={Marshal\bibnamedelima F},
+           giveni={M\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+        {{hash=4aa623b76a8732b911df3c15ac22aa28}{%
+           family={Folstein},
+           familyi={F\bibinitperiod},
+           given={Susan\bibnamedelima E},
+           giveni={S\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=5fa52bc25b157ccf8c92bd855d86d203}{%
+           family={McHugh},
+           familyi={M\bibinitperiod},
+           given={Paul\bibnamedelima R},
+           giveni={P\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+      }
+      \strng{namehash}{25b9bd5ff2a7486dad9a65034c209a5b}
+      \strng{fullhash}{25b9bd5ff2a7486dad9a65034c209a5b}
+      \strng{bibnamehash}{25b9bd5ff2a7486dad9a65034c209a5b}
+      \strng{authorbibnamehash}{25b9bd5ff2a7486dad9a65034c209a5b}
+      \strng{authornamehash}{25b9bd5ff2a7486dad9a65034c209a5b}
+      \strng{authorfullhash}{25b9bd5ff2a7486dad9a65034c209a5b}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of psychiatric research}
+      \field{note}{\url{https://doi.org/10.1016/0022-3956(75)90026-6}}
+      \field{title}{Mini-mental state: a practical method for grading the cognitive state of patients for the clinician}
+      \field{year}{1975}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

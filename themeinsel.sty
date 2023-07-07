@@ -1,0 +1,96 @@
+%% themeinsel.sty
+%% Inselspital, University Hospital Bern, Switzerland
+%% Theme for Latex Report Insel.
+%%    History:
+%%      06.01.2022: initial version
+%%
+%% Copyright 2022 by Katrin Petermann <katrin.petermann@insel.ch>
+%%
+%% This template can be redistributed and/or modified under the terms
+%% of the GNU Public License, version 2 or later.
+
+\usepackage{verbatim}
+
+% \usepackage{fancyhdr}
+\usepackage{color}
+\usepackage{amsmath, amssymb}
+% \usepackage{longtable}
+\usepackage{lscape}
+\usepackage{xspace}
+\usepackage{tikz}
+% \usepackage{footmisc}
+\usepackage{tabularx}
+\usepackage{colortbl, xcolor}
+\usepackage{textgreek}
+% \usepackage{rotating}
+% \usepackage[font=scriptsize, labelfont=bf]{caption}
+% \usepackage{subcaption}
+% \usepackage{multicol}
+\setlength{\columnsep}{1cm}
+% \usepackage[round]{natbib}
+
+%% colors
+\definecolor{insel@blue}{RGB}{108,165,218}
+\definecolor{insel@grey}{RGB}{103,112,120}
+\definecolor{insel@rose}{RGB}{229,203,214}
+\definecolor{insel@green}{RGB}{0,152,112}
+
+% Use Palatino (URW Palladio) for most of the text\ldots
+%\usepackage[sc]{mathpazo}
+\linespread{1.05} 
+
+% And Arial for the rest
+\usepackage[scaled]{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+
+% sans serif caption (added by sina)
+% \usepackage[font={sf, small}, labelfont={sf, bf}, margin=1cm]{caption}
+
+% \usepackage[T1]{fontenc}
+% \usepackage[latin1]{inputenc}
+
+% overall indent
+\setlength\parindent{0pt}
+
+% Headers and footers
+% \fancypagestyle{standard}{
+% \fancyhf{}
+% \renewcommand{\footrulewidth}{0.4pt}
+% \fancyfoot[c]{\footnotesize\thepage}
+% \fancyfoot[l]{\footnotesize\textsf{\name}, \href{mailto:\mail}{\textsf{\emph{\mail}}}}
+% \fancyfoot[r]{\footnotesize\textsf{\versiondate}}
+% \renewcommand{\headrulewidth}{0pt}
+% \fancyhead[c]{}
+% \fancyhead[l]{\vskip1cm \img}
+% \fancyhead[r]{}
+% }
+
+% remove footer on first page
+\fancypagestyle{titlepage}{%
+  \fancyhead[l]{\vskip1cm \raisebox{-0.1\height}{\img}}
+  \fancyhead[r]{\color{insel@grey}\name, \academictitles \\ \grp \\ }
+  \fancyfoot{}%
+  \renewcommand{\footrulewidth}{0pt}
+}
+
+%% titlepage
+\newcommand{\mytitle}{
+
+\vspace*{0.5cm}
+\begin{center}
+\fontsize{26pt}{26pt}\selectfont
+\textbf{\color{insel@grey}\projecttitle}
+\end{center}
+
+\vspace*{0.5cm}
+
+\fontsize{20pt}{20pt}\selectfont
+{\color{insel@grey}\subtitle}
+
+\begin{tikzpicture}[remember picture,overlay]
+  \node[above=-0.22cm] at (current page.south) {
+    \includegraphics[width = \paperwidth]{firstpage_colors.png}
+    };
+\end{tikzpicture}
+
+}

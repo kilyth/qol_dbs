@@ -1,0 +1,641 @@
+% #######################################################
+% ### Deep Brain Stimulation: STN vs GPi.
+% ### Figures
+% ### 2023 Katrin Petermann
+% #######################################################
+
+\documentclass[
+	a4paper, % Paper size, use either a4paper or letterpaper
+	10pt, % Default font size, can also use 11pt or 12pt, although this is not recommended
+	unnumberedsections, % Comment to enable section numbering
+	twoside, % Two side traditional mode where headers and footers change between odd and even pages, comment this option to make them fixed
+]{LTJournalArticle}
+
+%% The most common packages are already included in:
+\usepackage{themeinsel}
+\usepackage{lmodern}
+\usepackage{cuted}
+
+% =======================================
+% Personalized layout
+\newcommand{\versiondate}{\today}
+\newcommand{\projecttitle}{Factors that influence HrQoL after Deep Brain Stimulation in Parkinson's Disease: \\ is the target a factor?}
+
+% =======================================
+% bibliography
+\addbibresource{STNvsGPi.bib} % BibLaTeX bibliography file
+
+\footertext{\textit{\today}} % Text to appear in the footer, leave this command empty for no footer text
+
+\setcounter{page}{1} % The page number of the first page, set this to a higher number if the article is to be part of an issue or larger work
+
+% path to figures
+\graphicspath{{./figures}}
+
+% =======================================
+% specific options for knitR:
+%   -- does not include R code in the output file
+%   -- suppresses output from R
+% find all options: https://yihui.name/knitr/options/
+
+<<knitr, include=FALSE>>=
+library(knitr)
+
+opts_chunk$set(
+  echo = FALSE, 
+  warning = FALSE,
+  message = FALSE,
+  results='hide',
+  cache = TRUE
+)
+
+options(knitr.kable.NA = '')
+@
+
+% =======================================
+
+% =======================================
+% my latex commands
+\newcommand{\prog}[1]{\textsf{#1}}
+\newcommand{\pkg}[1]{\textit{#1}}
+\newcommand{\qol}{HrQoL }
+
+\begin{document}
+% \linespread{1.25}
+% \pagestyle{standard}
+% \thispagestyle{titlepage}
+% \mytitle
+% 
+% \cleardoublepage
+
+<<packages, echo=FALSE, message=FALSE, chache = FALSE>>=
+## Packages
+## --------
+## clear existing data and graphics
+rm(list=ls())
+graphics.off()
+
+## load libraries
+library(biostatUZH)
+library(cowplot)
+library(ggplot2)
+library(ggpol)
+library(ggpubr)
+library(grid)
+library(gridExtra)
+library(gtools)
+library(Hmisc)
+library(kableExtra)
+library(lattice)
+library(MASS)
+library(Matching)
+library(missForest)
+library(nlme)
+library(relaimpo)
+library(tableone)
+library(xtable)
+
+
+## load code
+source("./code/functions.r")
+@
+
+
+% =======Some Initial settings for R==============
+<<setup, include=FALSE>>=
+## dataset
+
+## remove patient 13
+# include_P13 <<- "yes" ## "yes" or "no"
+# 
+# remove_missing_pdq <<- "yes" ## "yes" or "no"
+# 
+# dd_raw <- read.csv('../data/DBSInParkinsonDiseas_DATA_2022-03-14_1202.csv')
+# set.seed(1234)
+# source("./code/data_preparation.R")
+
+@
+
+
+<<data, include=FALSE>>=
+
+## load precalculated data
+load("./data/dd_clean_imputed.RData")
+
+## Calculations
+## ---------------
+source(file = "./code/models.R")
+source(file = "./code/figures.R")
+source(file = "./code/tableone.R")
+
+@
+%========End of Initial Settings for R============
+
+\begin{minipage}[c]{\textwidth}
+
+\begin{center}
+\fontsize{30pt}{30pt}\selectfont
+\textbf{\projecttitle}
+\end{center}
+
+\vspace*{1.5cm}
+\begin{minipage}[c]{\textwidth}
+\center
+\renewcommand{\thefootnote}{\alph{footnote}}
+
+Murcia S, MD\footnotemark[1]{}\footnotemark[5]{}, Petermann K\footnotemark[1]{}, dipl.Ing. MSc, Debove I\footnotemark[1]{}\footnotemark[5]{}\footnotemark[6]{}, MD,  Nowacki A\footnotemark[2]{}, MD, Tinkhauser G\footnotemark[1]{}, MD PhD, Michelis JP\footnotemark[1]{}, MD, M\"{u}llner J\footnotemark[1]{}, MD, Schlaeppi JA\footnotemark[2]{}, MD, Krack P\footnotemark[1]{}, MD, Sch\"{u}pbach M\footnotemark[1]{}, MD, Pollo C\footnotemark[2]{}, MD, Lachenmayer ML\footnotemark[1]{}, MD
+
+\small
+\footnotetext[1]{Department of Neurology, Inselspital, Bern University Hospital, University of Bern, Switzerland}
+\footnotetext[2]{Department of Neurosurgery, Inselspital, Bern University Hospital, University of Bern, Switzerland}
+\footnotetext[3]{ARTORG Center for Biomedical Engineering Research, University of Bern, Switzerland}
+\footnotetext[5]{Corresponding Author}
+\vspace*{1cm}
+\end{minipage}
+\vspace*{1cm}
+
+\begin{flushleft}
+\small
+\textbf{Corresponding Author:}\\
+Dr. Lenard Lachenmayer\\
+Department of Neurology\\
+Inselspital\\
+Bern University Hospital\\
+Freiburgstrasse 10\\
+3010 Bern, Switzerland\\
+Phone: +41 31 632 21 11\\
+Fax: +41 31 632 03 21\\
+E-mail: \href{mailto:lenard.lachenmayer@insel.ch}{lenard.lachenmayer@insel.ch}\\
+
+\vspace*{1cm}
+\textbf{\textit{Keywords:}}\\
+Parkinson's disease\\
+Deep Brain Stimulation\\
+Subthalamic nucleus\\
+Globus Pallidus internus\\
+Quality of Life\\
+\end{flushleft}
+
+<<rdetails, echo = FALSE>>=
+# Base packages:
+Sys.setlocale("LC_TIME", "English")
+s <- sessionInfo()
+s1 <- s$basePkgs[1]
+for (i in 2:length(s$basePkgs)){s1 <- paste(s1, ", ", s$basePkgs[i], sep = "")}
+
+# Other Packages:
+pack.info <- installed.packages()
+output.packages <- data.frame(pack.info[names(s$otherPkgs) ,c("Package",
+"Version")])
+
+s2 <- paste(names(s$otherPkgs)[1],
+output.packages[names(s$otherPkgs)[1], "Version"])
+k <- length(names(s$otherPkgs))
+if(k>1) for (i in 2:k){s2 <- paste(s2, ", ",
+paste(names(s$otherPkgs)[i], output.packages[names(s$otherPkgs)[i],
+"Version"]), sep = "")}
+@
+
+\vspace*{3cm}
+\footnotesize{{\bf \prog{R} version and packages used to generate this report:}
+
+\prog{R} version: \textsf{\Sexpr{s$R.version$version.string}}
+
+Base packages: \textsf{\Sexpr{s1}}
+
+Other packages: \textsf{\Sexpr{s2}}
+
+This document was generated on \Sexpr{format(Sys.time(), "%B %d, %Y at %H:%M")}.}
+
+\end{minipage}
+\clearpage
+
+
+% =======================================
+% \section*{Abstract} \label{sec:abstract}
+% =======================================
+
+
+<<abstract>>=
+mu3_imp <- paste(round(coef(change_mod)["mu3_off_change"], 2),
+                 ", CI: ",
+                 formatCI(confint(change_mod)["mu3_off_change", ]),
+                 ", p = ",
+                 change_tab["mu3_off_change", "$p$-value"],
+                 sep = "")
+pain_imp <- paste(round(coef(change_mod)["vas_maxpain_change"], 2),
+                 ", CI: ",
+                 formatCI(confint(change_mod)["vas_maxpain_change", ]),
+                 ", p = ",
+                 change_tab["vas_maxpain_change", "$p$-value"],
+                 sep = "")
+
+sas_imp <- paste(round(coef(change_mod)["sas_change"], 2),
+                 ", CI: ",
+                 formatCI(confint(change_mod)["sas_change", ]),
+                 ", p = ",
+                 change_tab["sas_change", "$p$-value"],
+                 sep = "")
+
+n_stn <- dim(dd_all_wide[dd_all_wide$stim_target == "STN", ])[1]
+n_gpi <- dim(dd_all_wide[dd_all_wide$stim_target == "GPi", ])[1]
+
+mod <- t.test(pdq39_improvement_abs ~ stim_target, dd_all_wide)
+d <- round(abs(diff(mod$estimate)), 2)
+p <- paste("p =", formatPval(mod$p.value))
+@
+
+\begin{strip}
+\begin{abstract}
+\textbf{Background:} Subthalamic (STN) and pallidal (GPi) deep brain stimulation (DBS) improve health related quality of life (\qol) in people with Parkinson's disease (PD). To increase this improvement is necessary to identify the factors that influence the \qol. We examined these factors in a DBS cohort and specifically analyzed the \qol outcome in a group of patients whose clinical and demographic characteristics are chosen to preferentially perform GPi--DBS, following the patient-specific consensus approach for the selection of target.\\
+% \textbf{Objective:}\\
+\textbf{Methods:} This retrospective, observational, single center study includes \Sexpr{n_stn} patients with PD who underwent STN--DBS and \Sexpr{n_gpi} who underwent GPi--DBS. Multivariable linear regression was used to identify which variables have an impact on changes in \qol were assessed using the Parkinson's Disease Questionnaire (PDQ--39) at baseline and at the one year follow--up. Using a propensity score matching we compare the change in \qol between STN- and GPi-group balanced out demographic and preoperative clinical characteristics.\\
+\textbf{Results:} Improvement in motor outcome (\Sexpr{mu3_imp}), a reduction of pain (\Sexpr{pain_imp}) and improvement of apathy (\Sexpr{sas_imp}) contributed independently to improvements in \qol In the matched cohort PDQ--39 SI mean was \Sexpr{d} points better in the STN group than in the GPi group not statistically significant (\Sexpr{p}).\\
+\textbf{Discussion:} In a cohort of older patients, with worse cognitive performance and worse postural stability the DBS in GPi target shows no benefit on \qol compared with STN target. That may call into question the patient-specific approach for the selection of the target. The improvement of motor outcome, pain and apathy are factors that influence the \qol. Focusing the assessments and treatments after DBS on these factors may increase the improvement of \qol in people with PD.
+
+\end{abstract}
+\end{strip}
+% =======================================
+\section*{Introduction} \label{sec:introduction}
+% =======================================
+
+Parkinson's disease (PD) is a neurodegenerative disorder characterized by motor and non-motor symptoms with a profound impact on health related quality of life (\qol) \cite{schrag2000contributes, martinez2011impact}.  Deep brain stimulation (DBS) of the subthalamic nucleus (STN) or the Globus pallidus internus (GPi) is a well--accepted therapy for advanced PD with motor complications and able to improve motor \cite{lachenmayer2021subthalamic} and nonmotor symptoms \cite{dafsari2020beneficial} as well as \qol \cite{dafsari2018short, schuepbach2019quality}.\\
+While the STN may be the first choice as DBS target in many centers, there is an ongoing debate about the optimal DBS target for PD \cite{lachenmayer2021subthalamic}. The evidence so far from the randomized control studies (RCT) comparing targets suggest no superiority from GPi or STN regarding the most common primary outcome, motor outcome \cite{deep2001deep, anderson2005pallidal} nor \qol as a secondary outcome \cite{deep2001deep, follett2010pallidal, weaver2012randomized}. Mainly based on the understanding of the outcomes of the US Veterans Administration study, suggesting a worse long-term neurocognitive and neuropsychiatric performance and a greater number of falls in patients with STN--DBS \cite{anderson2005pallidal}, it has been proposed to choose the GPi target in elderly patients with poorer cognitive and mood indices and/or and prominent gait impairment, axial symptoms or falls \cite{deep2001deep, follett2010pallidal, rodriguez2005bilateral}.\\
+However, studies confirming the superiority of GPi in this patient profile are lacking \cite{lachenmayer2021subthalamic}. Therefore, the current retrospective single-center study aimed to determine STN-- and GPi--DBS outcomes with a particular focus on quality of life in a PD cohort that received target selection according to the proposed patient--specific approach.
+
+% =======================================
+\section*{Material and Methods} \label{sec:methods}
+% =======================================
+
+\begin{table*}
+\small
+\centering
+\caption{Preoperative patient characteristics for a total of \Sexpr{dim(dd_all_wide)[1]} patients. Continuous variables are summarized by mean and standard deviation (in brackets), while the categorical variables are listed in counts and percent (in brackets).}
+\begin{tabular}{llrrr}
+  \hline
+ & level & STN & GPi & $p$-value \\
+<<tableone, results='asis'>>=
+rws <- c(1, 3, 5, 7, 9, 11, 13, 15, 17, 19)
+col <- rep("\\rowcolor[gray]{0.95}", length(rws))
+print(xtable(t1), include.rownames = FALSE, include.colnames = FALSE, only.contents = TRUE,
+     add.to.row = list(pos = as.list(rws), command = col))
+
+kbl(t1, format = "html", row.names = FALSE,
+      col.names = c("", "level", "STN", "GPi", "p-value"),
+      align = "lrrrr", table.attr = "style='width:80%;'") %>%
+  kable_classic(html_font = "sans-serif") %>%
+  column_spec(1, bold = TRUE) %>%
+  row_spec(0, bold = TRUE) %>%
+  row_spec(seq(2, 20, by = 2), background = "#F2F2F2") %>%
+  save_kable(file = "./figures/tab_t1.png")
+@
+\hline
+\end{tabular}
+\label{tab:tableone}
+\end{table*}
+
+\paragraph{Study Population}
+We retrospectively identified patients diagnosed with Parkinson's disease (PD) who underwent bilateral STN or GPi DBS implantation at the University Hospital of Bern between 2009 and 2018. The time window was defined by the moment STN--DBS was introduced at our center until the time when the only target became STN. The selection criteria for neurosurgery included: advanced PD, good response to levodopa, medication--refractory motor fluctuations and levodopa--induced dyskinesia despite best medical treatment and absence of contraindications, neurosurgical and/or medical, like major depression with suicidal thoughts, dementia or acute psychosis. Older age, decreased postural stability and light cognitive impairment were characteristics to favor GPi target instead of STN. However, the choice of target was made following a multidisciplinary meeting, in which each patient's medical history was individually discussed without strict criteria for target selection.\\
+The surgical procedure was performed as previously reported \textcolor{red}{[ref]}. All patients underwent postoperative axial computed tomography (CT) to monitor complications and verify electrode position. Correct electrode position was documented by the neurosurgeon for all patients. Postoperatively, stimulation settings and antiparkinson medication were gradually adapted based on patient need and clinical response.\\
+We included all patients who had completed the 39-item Parkinson's Disease Questionnaire (PDQ--39) to assess self--reported \qol at both pre- and postoperative assessments one year after surgery.
+\paragraph{Clinical Measures}
+All patients underwent standardized clinical evaluations before and one year after neurosurgery as part of their routine long--term care. 
+
+These evaluations included (MDS--)UPDRS-III, Schwab \& England Activities of Daily Living, Marconi Dyskinesia Scale, Mini-Mental State (MMS), Hamilton Rating Scale for Depression (HAM-D), Starkstein Apathy Scale, Visual Analog Scale for Pain (VAS worst pain) and Parkinson's Disease Questionnaire (PDQ--39). From our data we extracted values for insomnia (sum of items 4, 5 and 6 of the HAM-D) and postural stability (item 30 of the UPDRS III or 3.12 of the MDS--UPDRS III). UPDRS III total scores were transformed into MDS-UPDRS-III scores as described by Goetz et al. \cite{goetz2012calibration}. A detailed description of the Scales can be found in the Supplementary Information.\\
+All scales were reported in On--medication condition except MDS--UPDRS III, which was reported in Off--medication/On--Stimulation and On--medication/On--Stimulation conditions. The Off--medication conditions were performed after 48 hours withdrawal of dopamine agonists and an overnight withdrawal of levodopa medication. The best On--medication condition was evaluated after administration of rapid release levodopa. Levodopa--equivalent daily dosage (LEDD) was calculated according to Tomlinson et al. \cite{tomlinson2010systematic} and Schade et al. \cite{schade2020levodopa}.
+
+\paragraph{Statistical Analysis}
+All statistical analyses were performed using \Sexpr{version$version.string} \cite{R}. The code can be found on GitHub \url{https://github.com/kilyth/qol_dbs}.\\
+Patients lacking PDQ--39 questionnaire were excluded from the analysis. Missing variables other than PDQ--39 were imputed using the \prog{R} package \pkg{missForest} version \Sexpr{s$otherPkgs$missForest$Version} \cite{missForest}.\\
+Linear models were used to assess the relationship between different clinical factors and the \qol. The signs of the differences between pre-- and postoperative values were chosen such that a positive change indicates an improvement on the respective scale. Thus, positive coefficients resulting from the linear models for change variables indicate an improvement in \qol. \\
+The relative importance metric pmvd (proportional marginal variance decomposition as proposed in \cite{feldman2005}) for the linear models was calculated using the \prog{R} package \pkg{relaimpo} version \Sexpr{s$otherPkgs$relaimpo$Version} \cite{relaimpo}.\\
+STN and GPi patients were matched according to the preoperative clinical factors used in the linear regression models. Propensity score matching was calculated using the \prog{R} package \pkg{Matching} version \Sexpr{s$otherPkgs$Matching$Version} \cite{matching} and the resulting difference in \qol was compared to $10^4$ permutations to estimate the significance of the result.\\
+Percentile bootstrap confidence intervals (CI) for the percent change values were calculated using 10'000 samples and 0.025 and 0.975 quantiles of the resulting distribution. All results are given with 95\% CI or $\pm$ standard deviation. (p$\leq$0.05: $\ast$, p$<$0.01: $\ast\ast$, p$<$0.001: $\ast\ast\ast$)\\
+Figures were created using the \prog{R} package \pkg{ggplot2} version \Sexpr{s$otherPkgs$ggplot2$Version} \cite{ggplot}.
+
+% =======================================
+\section*{Results} \label{sec:results}
+% =======================================
+<<results>>=
+
+n_pat <- dim(dd_all_wide)[1]
+n_match <- dim(dd_match)[1]
+
+## Percent Improvement
+tmp <- subset(dd_allvars_change, (target == "all" & subscore == "PDQ-39 SI"))
+
+pdq_perc_imp <- paste(round(tmp$score, 1),
+                      "\\%, (CI: ",
+                      formatCI(tmp[, c("lower", "upper")]), ")",
+                      sep = "")
+
+tmp <- subset(dd_allvars_change, (target == "all" & subscore == "MDS-UPDRS-III \n (off-medication)"))
+
+mu3_perc_imp <- paste(round(tmp$score, 1),
+                      "\\%, CI: ",
+                      formatCI(tmp[, c("lower", "upper")]),
+                      sep = "")
+
+
+tmp <- subset(dd_allvars_change, (target == "all" & subscore == "Pain"))
+
+pain_perc_imp <- paste(round(tmp$score, 1),
+                      "\\%, CI: ",
+                      formatCI(tmp[, c("lower", "upper")]),
+                      sep = "")
+
+tmp <- subset(dd_allvars_change, (target == "all" & subscore == "Marconi"))
+
+marconi_perc_imp <- paste(round(tmp$score, 1),
+                      "\\%, CI: ",
+                      formatCI(tmp[, c("lower", "upper")]),
+                      sep = "")
+
+tmp <- subset(dd_allvars_change, (target == "STN" & subscore == "LEDD"))
+ledd_stn_imp <- paste(round(tmp$score, 1),
+                      "\\%, CI: ",
+                      formatCI(tmp[, c("lower", "upper")]),
+                      sep = "")
+
+tmp <- subset(dd_allvars_change, (target == "GPi" & subscore == "LEDD"))
+ledd_gpi_imp <- paste(round(tmp$score, 1),
+                      "\\%, CI: ",
+                      formatCI(tmp[, c("lower", "upper")]),
+                      sep = "")
+
+tmp <- subset(dd_allvars_change, (target == "all" & subscore == "Starkstein"))
+starkstein_perc_imp <- paste(round(tmp$score, 1),
+                      "\\%, CI: ",
+                      formatCI(tmp[, c("lower", "upper")]),
+                      sep = "")
+@
+
+In total, the cohort included 202 PD patients who received bilateral STN or GPi DBS. 21 withdrew consent, 35 were lost to follow-up and 5 lacked PDQ--39. Finally \Sexpr{n_pat} patients were included for the analysis of which \Sexpr{n_stn} received STN--DBS and \Sexpr{n_gpi} GPi--DBS. As shown in Table \ref{tab:tableone}, the two groups had different baseline characteristics being the patients in the group of GPi older, with longer disease duration, worse \qol, less improvement in MDS--UPDRS--III in L--Dopa Challenge, with more dyskinesia scores and worse postural stability. Regarding MMS there is a statistically significant but clinically not relevant difference of less than 1 point. There were no differences in terms of LEDD, MDS--UPDRS--III in Off--medication state, activities of daily living (Schwab \& England Scale), insomnia, pain and neuropsychiatric issues (Hamilton and Starkstein scales). \\
+In a subanalysis to compare the \qol between GPi and STN group we used a matched cohort in order to minimize the selection bias. The matched cohort included \Sexpr{n_match} patients, \Sexpr{n_gpi} patients in the STN group and \Sexpr{n_gpi} in the GPi group which only differed by the target as shown in Table \ref{tab:tablmatched} in the Supplements.
+
+
+\paragraph{Change of variables after one year follow-up}
+One year after DBS the patients showed a remarkable improvement compared to the baseline by MDS--UPDRS--III Off--medication (\Sexpr{mu3_perc_imp}), VAS worst pain (\Sexpr{pain_perc_imp}) and Marconi score (\Sexpr{marconi_perc_imp}). As expected, LEDD reduction was greater in the STN group (\Sexpr{ledd_stn_imp}) than in the GPi group (\Sexpr{ledd_gpi_imp}). Apathy worsened in both groups (\Sexpr{starkstein_perc_imp}). All the outcome variables are shown in the supplement Figure S2.
+
+\paragraph{Stimulation Parameters}
+<<stimulation>>=
+
+replace_0_by_na <- function(x){
+  return(ifelse(x == 0, NA, x))
+}
+
+stim_cols <- c("ar1_amp_postop", "ar2_amp_postop", "ar3_amp_postop", "ar4_amp_postop",
+          "ar1_wid_postop", "ar2_wid_postop", "ar3_wid_postop", "ar4_wid_postop",
+          "ar1_rate_postop", "ar2_rate_postop", "ar3_rate_postop", "ar4_rate_postop")
+
+for(col in stim_cols){
+  dd_stim[, col] <- replace_0_by_na(dd_stim[, col])
+}
+
+amp_mean <- mean(unlist(dd_stim[, stim_cols[1:4]]), na.rm = TRUE)
+amp_sd <- sd(unlist(dd_stim[, stim_cols[1:4]]), na.rm = TRUE)
+pw_mean <- mean(unlist(dd_stim[, stim_cols[5:8]]), na.rm = TRUE)
+pw_sd <- sd(unlist(dd_stim[, stim_cols[5:8]]), na.rm = TRUE)
+rate_mean <- mean(unlist(dd_stim[, stim_cols[9:12]]), na.rm = TRUE)
+rate_sd <- sd(unlist(dd_stim[, stim_cols[9:12]]), na.rm = TRUE)
+
+txt_amp <- paste(round(amp_mean, 2), "$\\pm$", round(amp_sd, 2), "mA", sep = " ")
+txt_pw <- paste(round(pw_mean, 1), "$\\pm$", round(pw_sd, 1), "\\textmu s", sep = " ")
+txt_rate <- paste(round(rate_mean, 1), "$\\pm$", round(rate_sd, 1), "Hz", sep = " ")
+@
+
+The average parameters were \Sexpr{txt_amp} amplitude, \Sexpr{txt_pw} pulse width, and \Sexpr{txt_rate} frequency.
+
+\paragraph{Quality of Life}
+
+<<matches>>=
+match_diff_pdq <- paste(round(matches$est, 1), "$\\pm$", 
+                        round(matches$se.standard, 1), sep = " ")
+
+match_diff_stability_stn <- with(dd_match[dd_match$stim_target == "STN subgroup",],
+                                 paste(round(mean(stability_on_change), 2),
+                                       "$\\pm$", 
+                                       round(sd(stability_on_change), 2)))
+
+match_diff_stability_gpi <- with(dd_match[dd_match$stim_target == "GPi",],
+                                 paste(round(mean(stability_on_change), 2),
+                                       "$\\pm$", 
+                                       round(sd(stability_on_change), 2)))
+
+match_diff_stability_p <- paste("p-value =", 
+                                formatPval(wilcox.test(stability_on_change ~ stim_target, 
+                                                                    data = dd_match)$p.value))
+
+pred_age <- with(rf_mod_plot["age_surgery", ],
+                 paste(round(coef, 2), ", CI: ",
+                       formatCI(c(lower, upper)),
+                       ", p-value = ", formatPval(coef(summary(rf_mod))["age_surgery", 4]),
+                       sep = ""))
+@
+
+Using multiple linear regression, age was the only preoperative predictor of HRQoL improvement at 1-year postoperative (\Sexpr{pred_age}, Supplementary Table \ref{tab:rf_mod}).
+
+\textcolor{red}{Continue here}
+
+\paragraph{\qol in the Matched Cohort}
+Since the DBS target was chosen following a patient-specific approach, the lack of influence of the target on the \qol could be due to selection bias. Using propensity score matching, we created an STN subgroup, whose average baseline variables did not differ from the GPi cohort (Supplementary Table \ref{tab:tablmatched}). Comparing these two groups we did not see a significant difference in the postoperative PDQ--39 SI, with a tendency for the STN patients to have a better \qol one year after surgery (\Sexpr{match_diff_pdq} points on the PDQ--39 SI, p = \Sexpr{formatPval(p_matches)}).\\
+Postural stability and the MMS outcome were important criteria for the target selection. In the matched group, the postural stability improved in the STN group (mean improvement \Sexpr{match_diff_stability_stn}) while the GPi group slightly worsened (mean improvement \Sexpr{match_diff_stability_gpi}, \Sexpr{match_diff_stability_p}). There was no difference in MMS outcome between the two targets.
+
+\begin{figure}[h]
+\label{fig:pdq_subscores}
+\includegraphics[width=0.48\textwidth]{fig_pdq_subscores.pdf}
+\caption{Mean percent change before and one year after DBS implantation of PDQ--39 SI and subscores. Results are shown for the whole cohort of \Sexpr{n_stn} STN (blue) and \Sexpr{n_gpi} GPi patients (yellow). Positive values indicate an improvemet in the respective subscore.}
+\end{figure}
+
+\begin{figure}[h]
+\label{fig:fig_change_mod}
+\includegraphics[width=0.48\textwidth]{fig_change_mod.pdf}
+\caption{Results of the linear model showing the relationship between the improvement in PDQ--39 SI and the improvement in the respective variables. The upper panel shows the relative importance of the variables, while the lower panel shows the regression coefficients with 95\% CIs. Positive regression coefficients indicate that an improvement in the respective variable leads to an improvement in \qol. Numeric results of the model can be found in the Supplementary Table \ref{tab:change_mod}.}
+\end{figure}
+
+
+\begin{figure*}[h]
+\label{fig:fig_matched_change}
+\includegraphics[width=\textwidth]{fig_matched_change.pdf}
+\caption{Absolute improvement of PDQ--39 SI (A and B), postural stability (C) and MMS (D) after DBS. Positive values indicate an improvement after DBS. Subfigure A shows the results for the whole cohort of \Sexpr{n_stn} STN (blue) and \Sexpr{n_gpi} GPi patients (yellow). Subfigures B, C and D show the results of the \Sexpr{n_gpi} matched STN patients (green). The \Sexpr{n_gpi} GPi patients are the same in all subfigures.}
+\end{figure*}
+
+% =======================================
+\section*{Discussion} \label{sec:discussion}
+% =======================================
+<<discussion>>=
+hamd_bl_stn <- with(dd_all_wide[dd_all_wide$stim_target == "STN",],
+                    paste(round(mean(hamd_total_preop), 1),
+                          "$\\pm$",
+                          round(sd(hamd_total_preop), 1)))
+hamd_bl_gpi <- with(dd_all_wide[dd_all_wide$stim_target == "GPi",],
+                    paste(round(mean(hamd_total_preop), 1),
+                          "$\\pm$",
+                          round(sd(hamd_total_preop), 1)))
+
+@
+
+In our retrospective analysis of a monocentric DBS cohort, one year after STN-- or GPi--DBS the \qol improved on average by \Sexpr{pdq_perc_imp}, similar to that previously RCT reported. Except for communication all PDQ--39 subscores improved, specially ADL, stigma and bodily discomfort. These findings are consistent with the literature. The lack of improvement in communication in the majority of studies suggests that speech typically does not respond to DBS.\\
+In the present study we identified three factors that influence independently and significantly the change in \qol after DBS: an improvement in UPDRS-III, in pain and in apathy.
+Given the clear motor improvement after DBS, it would be expected to have an impact on quality of life, and this is the case in our study. However, the impact of motor improvement on \qol after DBS remains a matter of controversy. There is a high heterogeneity in the published studies with different analytic approaches and not always the same scale to measure \qol. Some of them are studies in PD patients with exclusive medical treatment. The DBS studies focus most of the time in predictors of \qol outcome and not on how the change variables influence it independently. Furthermore, the published DBS studies target overall STN.
+Pain is a clear determinant for \qol outcome in PD. Our study suggests that the pain improvement after DBS may contribute substantially to the \qol. The literature highlights the limitation that exists in the study of the pain in PD after DBS due to the lack of studies with pain as a main outcome, the heterogeneity of the scales between publications and the multifactorial etiological character of pain. Nevertheless, there is increasing evidence that PD-related chronic pain can be alleviated with DBS (26, 27) without significant differences between targets (27). More studies are needed to characterize different types of PD-related pain as they may be influenced differently by DBS and use a unified scale that allows comparison between different studies.
+Apathy is frequently identified as a determinant of \qol in people with PD. In our study apathy worsened after DBS overall in the STN--DBS group, probably related first to the dopamine withdrawal and second to the area stimulated. The change on the apathy score was identified as an independent determinant factor for the \qol after surgery. Therefore, our study highlights the importance of screening apathy postoperatively and if present, dopaminergic drugs should be reintroduced as a first therapeutic step. Depression has been identified as one of the strongest predictors of QoL in PD in the literature. Surprisingly, in our analysis it was not relevant to \qol changes. It may reflect the fact that our study population did not suffer from either severe depression, which would be a contraindication for surgery, or even mild depression (HAM-D mean, STN--DBS \Sexpr{hamd_bl_stn}; GPi \Sexpr{hamd_bl_gpi}).
+In our study the target was a factor that did not influence \qol. Nevertheless, we observed a tendency in the DBS-STN group to have a higher improvement in \qol after the surgery than the DBS-GPi group. In order to characterize better if this tendency was real, we checked between the SNT-DBS group if there were patients with similar characteristics like the GPi--DBS group, since the target selection was made according to clinical decision-making and we could find a matched subcohort with older patients with worse cognitive scores and postural stability who differ only by the target. Our hypothesis was that in this group of patients the GPi target would be beneficial in terms of \qol, cognition and postural stability. Surprisingly there were not statistically significant differences between the improvement in \qol depending on the two targets, the cognition remained stable with no difference between the target and the postural stability slightly improved in the STN group and worsened in the GPi group with statistical significance but not clinical relevance. Therefore, our results showed in a cohort of patients from clinical routine, that the classical patient-specific approach to choose the DBS target may not provide a benefit in terms of \qol. As mentioned in the last meta-analysis comparing GPi and STN targets in DBS for PD, there is still scarce of publications justifying the shift from STN to GPi depending on the profile symptoms of the patients \cite{}. The few studies published so far that showed a statistically significant difference between the targets regarding \qol in favor to GPi are with follow-up at 6 months (5, 22). This short time follow-up may give to the patients undergoing to DBS-GPi an advantage in the PDQ--39 scores over the patients undergoing to DBS-STN due to the longer time requirements for stimulation parameter and dopaminergic medication adjustments for STN target. As far as we know there are any other publications that compares \qol between STN and GPi with an intermediate follow-up and in a comparable cohort of patients from the standard clinical practice.
+Since \qol is a very complex construct, there must be many factors other than health, such as social support and family background, individual coping strategies, cultural context of the patients, distressful feelings like shame that play an important role. Tools and scales to measure these factors are needed in order to keep on improving the quality of life of the people with PD.
+Our study has several caveats. As a retrospective study, data were limited to the data collected by the clinical assessments. However, it is representative of real-life outcomes. The small number of patients in GPi group compared with the STN group and the conversion of UPDRS-III to MDS-UPDRS III may have an impact on our statistical results. The scales to measure postural stability and insomnia variables were not standardized. Not all the non-motor symptoms neither the fluctuations in PD were analyzed because of lack of comparable scales in the assessments. The part I, II and IV are hardly comparable between UPDRS and MDS-UPDRS. Propensity score matching indicated a good balance of demographic characteristics and clinical outcome parameters at baseline. However, while this method accounts for known outcome parameters/covariates of analyses, thus minimizing selection bias, an unbalance of unknown parameters cannot be ruled out.
+
+% =======================================
+\section*{Conclusion} \label{sec:conclusion}
+% =======================================
+The subthalamic and pallidal stimulation improves the \qol in people with PD. In a group of older patients, with worse cognitive performance and worse postural stability typically GPi target for the DBS is chosen expecting that the outcomes and consequently the \qol is better than selecting STN target. Our study suggests that \qol in the group of STN--DBS for this profile of patients improves the same. That may call into question the classical patient-specific approach for the selection of the target.
+Identifying the modification of the factors determinant of \qol after DBS may assist clinicians focus their assessments and treatment strategies to minimize the disability associated with PD. Prospective studies are needed.
+\clearpage
+% =======================================
+% \section*{References} \label{sec:ref}
+% =======================================
+
+\nocite{R}
+\printbibliography
+% \bibliography{STNvsGPi.bib}
+
+\vfill
+
+\clearpage
+
+\onecolumn
+% =======================================
+\section*{Supplement} \label{sec:supp}
+% =======================================
+
+\renewcommand{\figurename}{Supplementary Figure}
+\setcounter{figure}{0}
+
+\renewcommand{\tablename}{Supplementary Table}
+\setcounter{table}{0}
+
+\begin{figure}[ht]
+\label{fig:fig_perc_change_allvars}
+\includegraphics[width=\textwidth]{fig_perc_change_allvars.pdf}
+\caption{Percent change before and one year after DBS implantation. Results are shown for the whole cohort of \Sexpr{n_stn} STN (blue) and \Sexpr{n_gpi} GPi patients (yellow). Positive values indicate an improvemet in the respective score. Single dots indicate the result for each patient, while bars indicate the mean percent change.}
+\end{figure}
+
+\begin{table}[ht]
+\small
+\centering
+\begin{tabular}{llllr}
+  \hline
+Variable & Coefficient & 95\%-confidence interval & $p$-value & Relative Importance (\%) \\ 
+<<rfModTable, results='asis'>>=
+rws <- c(1, 3, 5, 7, 9, 11, 13, 15)
+col <- rep("\\rowcolor[gray]{0.95}", length(rws))
+print(xtable(rf_tab), include.rownames = FALSE, include.colnames = FALSE, only.contents = TRUE,
+      add.to.row = list(pos = as.list(rws), command = col))
+
+kbl(rf_tab, format = "html", row.names = FALSE,
+      col.names = c("", "level", "STN", "GPi", "p-value"),
+      align = "lrrrr", table.attr = "style='width:80%;'") %>%
+  kable_classic(html_font = "sans-serif") %>%
+  column_spec(1, bold = TRUE) %>%
+  row_spec(0, bold = TRUE) %>%
+  row_spec(seq(2, 16, by = 2), background = "#F2F2F2") %>%
+  save_kable(file = "./figures/tab_rf_mod.png")
+@
+\hline
+\end{tabular}
+\caption{Results of the linear model showing the relationship between the improvement in PDQ--39 SI and the preoperative variables. Positive regression coefficients indicate that an increase in the respective variable leads to an improvement in \qol.\\
+Residual standard error: \Sexpr{round(sd(rf_mod$residuals), 2)} on \Sexpr{rf_mod$df.residual} degrees of freedom, Adjusted R-squared: \Sexpr{round(summary(rf_mod)$adj.r.squared, 3)}, F-statistic: \Sexpr{round(summary(rf_mod)$fstatistic[1], 3)} on \Sexpr{round(summary(rf_mod)$fstatistic[2], 0)} and \Sexpr{round(summary(rf_mod)$fstatistic[3], 0)} DF,  p-value: \Sexpr{format.pval(with(summary(rf_mod), pf(fstatistic[1],fstatistic[2],fstatistic[3],lower.tail=F)))}}
+\label{tab:rf_mod}
+\end{table}
+
+\begin{table}[ht]
+\small
+\centering
+\begin{tabular}{llllr}
+  \hline
+Variable & Coefficient & 95\%-confidence interval & $p$-value & Relative Importance (\%) \\ 
+<<changeModTable, results='asis'>>=
+rws <- c(1, 3, 5, 7, 9, 11)
+col <- rep("\\rowcolor[gray]{0.95}", length(rws))
+print(xtable(change_tab), include.rownames = FALSE, include.colnames = FALSE, only.contents = TRUE,
+      add.to.row = list(pos = as.list(rws), command = col))
+
+kbl(change_tab, format = "html", row.names = FALSE,
+      col.names = c("", "level", "STN", "GPi", "p-value"),
+      align = "lrrrr", table.attr = "style='width:80%;'") %>%
+  kable_classic(html_font = "sans-serif") %>%
+  column_spec(1, bold = TRUE) %>%
+  row_spec(0, bold = TRUE) %>%
+  row_spec(seq(2, 12, by = 2), background = "#F2F2F2") %>%
+  save_kable(file = "./figures/tab_change_mod.png")
+@
+\hline
+\end{tabular}
+\caption{Results of the linear model showing the relationship between the improvement in PDQ--39 SI and the improvement in the respective variables. Positive regression coefficients indicate that an improvement in the respective variable leads to an improvement in \qol.\\
+Residual standard error: \Sexpr{round(sd(change_mod$residuals), 2)} on \Sexpr{change_mod$df.residual} degrees of freedom, Adjusted R-squared: \Sexpr{round(summary(change_mod)$adj.r.squared, 3)}, F-statistic: \Sexpr{round(summary(change_mod)$fstatistic[1], 3)} on \Sexpr{round(summary(change_mod)$fstatistic[2], 0)} and \Sexpr{round(summary(change_mod)$fstatistic[3], 0)} DF,  p-value: \Sexpr{format.pval(with(summary(change_mod), pf(fstatistic[1],fstatistic[2],fstatistic[3],lower.tail=F)))}}
+\label{tab:change_mod}
+\end{table}
+
+\begin{table}[ht]
+\small
+\centering
+\caption{Preoperative patient characteristics for the matched cohort with \Sexpr{n_gpi} STN and \Sexpr{n_gpi} patients. Continuous variables are summarized by mean and standard deviation (in brackets), while the categorical variables are listed in counts and percent (in brackets).}
+\begin{tabular}{llrrr}
+  \hline
+ & level & STN & GPi & $p$-value \\
+<<matchedTable, results='asis'>>=
+rws <- c(1, 3, 5, 7, 9, 11, 13, 15, 17, 19)
+col <- rep("\\rowcolor[gray]{0.95}", length(rws))
+print(xtable(tm), include.rownames = FALSE, include.colnames = FALSE, only.contents = TRUE,
+      add.to.row = list(pos = as.list(rws), command = col))
+
+kbl(tm, format = "html", row.names = FALSE,
+      col.names = c("", "level", "STN", "GPi", "p-value"),
+      align = "lrrrr", table.attr = "style='width:80%;'") %>%
+  kable_classic(html_font = "sans-serif") %>%
+  column_spec(1, bold = TRUE) %>%
+  row_spec(0, bold = TRUE) %>%
+  row_spec(seq(2, 20, by = 2), background = "#F2F2F2") %>%
+  save_kable(file = "./figures/tab_tm.png")
+@
+\hline
+\end{tabular}
+\label{tab:tablmatched}
+\end{table}
+
+% \begin{sidewaystable}
+% \small
+% \caption{Summary of scores used in the analysis.}
+% \begin{tabular}{lrrlp{14cm}}
+% \hline
+% Scale & Max Score & Best Score & Evaluator & Description\\
+% \hline
+% \rowcolor[gray]{0.95}
+% UPDRS--III & 108 & 0 & Clinician & Unified Parkinson's Disease Rating Scale, Part 3: Motor Evaluation.\\
+% MDS--UPDRS--III & 132 & 0 & Clinician & Movement Disorder Society Unified Parkinson's Disease Rating Scale, Part 3: Motor Evaluation.\\
+% \rowcolor[gray]{0.95}
+% Schwab \& England & 100 & 100 & Clinician & The Schwab \& England Activities of Laily Living scale is used to assess the independence of people with impaired mobility. It is scaled from 0\% (fully dependent) to 100\% (fully independent).\\
+% Marconi & 28 & 0 & Clinician & Marconi Dyskinesia Rating Scale is used to evaluate the type, localization and severity of dyskinesias observed during the ON state of the levodopa challenge.\\
+% \rowcolor[gray]{0.95}
+% MMS & 30 & 30 & Clinician & The Mini Mental State is a 30 point questionnaire that is used to measure cognitive impairment \cite{folstein1975mini}.\\
+% Hamilton\\
+% \rowcolor[gray]{0.95}
+% Starkstein & 56 & 0 & Patient & Starkstein Apathy Scale.\\
+% Pain & 10 & 0 & Patient & Visual analog scale (VAS) for maximal pain in the last week.\\
+% \rowcolor[gray]{0.95}
+% PDQ--39 SI & 100 & 0 & Patient & Summary Index of the Parkinson's Disease Questionnaire is a measure if \qol. The PDQ-39 assesses how often people with Parkinson's experience difficulties across 8 dimensions of daily living. The dimensions are Mobility, Activities of daily living, Emotional well-being, Stigma, Social support, Cognition, Communication and Bodily discomfort. Each dimension total score is scaled from 0 (never have difficulty) to 100 (always have difficulty). The PDQ--39 Summary Index (PDQ--39 SI) is the average of the dimensional scores.\\
+% Insomnia\\
+% \rowcolor[gray]{0.95}
+% Postural Stability & 4 & 0 & Clinician & Item 30 of the UPDRS III or 3.12 of the MDS--UPDRS III\\
+% LEDD & & 0 & Clinician & Levodopa Equivalent Daily Dose, obtained by adding together the Levodopa Equivalent
+% Dose for each antiparkinsonian drug, provides an artificial but practically useful summary of the total daily antiparkinsonian medication a patient is receiving . Here, the LEDD has been calculated according to \citeauthor{tomlinson2010systematic} (\citeyear{tomlinson2010systematic}) \cite{tomlinson2010systematic} and Schade et al. (2020) \cite{schade2020levodopa}.\\
+% \hline
+% \end{tabular}
+% \end{sidewaystable}
+
+\end{document}
+
+
+
+
+
+
